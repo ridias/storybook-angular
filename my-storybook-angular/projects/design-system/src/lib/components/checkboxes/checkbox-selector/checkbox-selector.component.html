@@ -1,0 +1,19 @@
+<div (click)="activeOrDesactiveSelector()"
+    [ngClass]="{'checkbox-selector-active': active == true, 'checkbox-selector': active == false }"
+    [style.color]="active ? colorActive : color"
+    [style.border-color]="active ? borderColorActive : borderColor"
+    [style.background-color]="active ? bgColorActive : bgColor">
+    <div class="checkbox-selector-description">
+        {{ description }}
+    </div>
+    <div class="checkbox-selector-icon">
+        <i class="general-icon-md bi bi-plus-circle-fill"
+            [style.color]="active ? colorIconActive : colorIcon" 
+            *ngIf="!active">
+        </i>
+        <i class="general-icon-md bi bi-x-circle-fill"
+            [style.color]="active ? colorIconActive : colorIcon"
+            *ngIf="active">
+        </i>
+    </div>
+</div>

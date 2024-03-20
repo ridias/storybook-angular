@@ -1,0 +1,60 @@
+<div class="multiple-items-input"
+    [ngStyle]="{
+        '--border-color-input': borderColorInput,
+        '--bgcolor-btn': bgColorBtn,
+        '--bgcolor-btn-hover': bgColorBtnHover,
+        '--border-color-btn': borderColorBtn,
+        '--bgcolor-item': bgColorItem,
+        '--bgcolor-hover-item': bgColorHoverItem
+
+    }">
+    <div class="multiple-items-input-bar">
+        <input type="text" 
+            [style.background-color]="bgColorInput"
+            [value]="inputValue"
+            [placeholder]="inputPlaceholderValue" 
+            disabled>
+    </div>
+    <div class="multiple-items-input-btn" 
+        (click)="switchOptions()">
+        <i class="general-icon-sm bi bi-pen-fill"></i>
+    </div>
+
+    <div class="multiple-items-input-list" *ngIf="isOpen"
+        [style.background-color]="bgColorInput">
+        <div class="multiple-items-input-list-header">
+            <div class="multiple-items-input-list-header-search">
+                <i class="general-icon-extra-md bi bi-search"></i>
+                <input type="text" 
+                    (keyup)="searchByName($event)" 
+                    placeholder="Buscar...">
+            </div>
+        </div>
+
+        <div class="multiple-items-input-list-content">
+            <div class="multiple-items-input-list-item">
+                <label class="multiple-items-input-list-item-description">
+                    {{ descriptionSelectAll }}
+                </label>
+                <div class="multiple-items-input-list-item-check">
+                    <input type="checkbox" 
+                        (change)="changeStatusSelectAll($event)" 
+                        [checked]="allSelected">
+                </div>
+            </div>
+
+            <div class="multiple-items-input-list-item" 
+                *ngFor="let item of cacheItems"
+                (click)="activeById(item.id, !item.active)">
+                <label class="multiple-items-input-list-item-description">
+                    {{ item.name }}
+                </label>
+                <div class="multiple-items-input-list-item-check">
+                    <input type="checkbox" 
+                        [checked]="item.active">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

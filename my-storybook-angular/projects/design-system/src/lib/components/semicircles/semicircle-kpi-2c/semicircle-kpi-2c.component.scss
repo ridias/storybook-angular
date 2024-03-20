@@ -1,0 +1,66 @@
+.kpi-semicircle {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .kpi-semicircle-loading {
+    width: 100%;
+    height: 100%;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* multi-graph */
+  
+  .multi-graph{
+      position: relative;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 600;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      box-sizing : border-box;
+      .graph{
+        border: 15px solid var(--fill);
+        border-top: none;
+        position: absolute;
+        transform-origin: 50% 0% 0;
+        left: 0;
+        top: 100%;
+        z-index: 5;
+        transform: rotate( calc( 1deg * ( var(--percentage) * 1.8 ) ) );
+        box-sizing : border-box;
+      }
+    }
+  
+  .icon-arrow {
+      width: 0px;
+      height: 0px;
+      background-size: cover;
+      position: absolute;
+      top: 0px !important;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: 75px solid var(--color-font-primary);
+      z-index: 99999;
+      -webkit-transform-origin: bottom center;
+      -moz-transform-origin: bottom center;
+      -o-transform-origin: bottom center;
+      transform-origin: bottom center;
+      transform: rotate(0deg);
+      transition: 0.2s transform;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+  }
+  
+  .kpi-semicircle-description {
+      color: var(--color-font-primary);
+      font-size: 11px;
+      margin-top: 5px;
+      text-align: center;
+  }
+  

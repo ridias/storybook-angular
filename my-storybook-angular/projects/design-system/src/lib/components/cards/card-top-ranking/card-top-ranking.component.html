@@ -1,0 +1,36 @@
+<div class="card-top-rank">
+    <div class="card-top-rank-left">
+        <div *ngIf="values.length == 0 && !isLoading" class="card-top-empty">
+            {{ emptyValue }}
+        </div>
+
+        <div *ngIf="isLoading">
+            <span class="loader" 
+                [style.border-color]="isLoadingColor"
+                [style.border-bottom-color]="'transparent'">
+            </span>
+        </div>
+
+        <div class="card-top-rank-row" 
+            *ngFor="let val of values" 
+            [style.color]="val.color">
+            {{ val.name }}
+        </div>
+    </div>
+
+    <div class="card-top-rank-right">
+        <div class="card-top-rank-right-titles">
+            <div class="card-top-rank-right-title">
+                {{ titleValue }}
+            </div>
+            <div class="card-top-rank-right-subtitle">
+                {{ subtitleValue }}
+            </div>
+        </div>
+        <div class="card-top-rank-right-icon">
+            <i class="general-icon-md bi bi-bar-chart-fill"
+                [style.color]="colorIcon">
+            </i>
+        </div>
+    </div>
+</div>

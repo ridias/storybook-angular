@@ -1,0 +1,22 @@
+<div class="semicircle-progress">
+    <div class="semicircle-progress-header">
+        {{ titleCard }}
+    </div>
+
+    <div class="semicircle-progress-kpi">
+        <div class="half-circle"
+            [style.border-color]="colorSemiCircle">
+        </div>
+        <div class="icon-arrow arrow"
+            [style.left]="currentLeft + 'px'"
+            [style.top]="currentTop + 'px'"
+            [style.transform]="'rotate(' + currentDeg + 'deg)'">
+        </div>
+    </div>
+
+    <div class="semicircle-progress-details">
+        <div class="semicircle-progress-details-val">
+            {{ value }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div [ngClass]="!isOpen ? 'accordion-component' : 'accordion-component is-open'"
+    [style.border-width.px]="borderWidth"
+    [style.border-color]="borderColor"
+    [style.border-style]="borderStyle">
+    <div>
+        <div class="accordion-header" 
+            (click)="triggerAction()"
+            [style.borderBottom]="borderBottom">
+            <div class="accordion-description">
+                {{ text }}
+            </div>
+            <div class="accordion-header-icon">
+                <i class="general-icon-sm bi bi-chevron-down"
+                    [style.transform]="transformIcon"
+                    [style.color]="iconColor"></i>
+            </div>
+        </div>
+        <div class="accordion-content">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

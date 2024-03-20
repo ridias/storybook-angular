@@ -1,0 +1,23 @@
+<div>
+    <div class="card-total-bar-bottom">
+        <div class="card-total-bar-horizontal"
+            [style.background-color]="colorBar">
+            <div class="card-total-bar-filled-horizontal"
+                [style.width]="filledBarInPercentage + '%'" 
+                [style.background]="colorFilled">
+            </div>
+        </div>
+        <div class="card-total-bar-mini-line" 
+            [style.top]="topLine"
+            [style.left]="positionMiniLineInPercentage + '%'"
+            [style.background]="colorMiniLine">
+            <div class="card-total-bar-window" *ngIf="isToolTip">
+                <div class="card-total-bar-window-card"
+                    [style.background]="colorMiniLine"
+                    [style.top]="topWindow">
+                    {{ titleToolTip }} {{ compareValue }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

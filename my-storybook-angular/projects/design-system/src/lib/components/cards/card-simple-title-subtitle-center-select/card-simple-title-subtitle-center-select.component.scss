@@ -1,0 +1,118 @@
+.card-simple-title-subtitle-center-select {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-font-primary);
+    position: relative;
+}
+
+.card-simple-title-subtitle-center-select-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 0px solid var(--color-border-secondary);
+}
+
+.card-simple-title-subtitle-center-select-header-subtitle {
+    font-weight: 400;
+}
+
+.card-simple-title-subtitle-center-select-icon {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+.card-simple-title-subtitle-center-select-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.card-select-actions {
+    position: absolute;
+}
+
+.card-select-item {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.card-select-item-select {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-border-secondary);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.card-select-item-description {
+    font-size: 18px;
+    color: var(--color-font-primary);
+    font-family: var(--font-family-secondary);
+}
+
+.card-select-item-icon i {
+    color: var(--color-font-primary);
+}
+
+.card-select-item-list {
+    width: 100%;
+    max-height: 120px;
+    overflow: auto;
+    border-radius: 3px;
+    border: 1px solid var(--color-border-secondary);
+    position: absolute;
+    top: 35px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-select-item-option {
+    width: 100%;
+    padding: 5px 10px;
+    border-bottom: 1px solid var(--color-border-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.card-select-item-option:hover {
+    background-color: var(--color-onbg-secondary-variant);
+}
+
+.card-select-item-option-description {
+    font-size: 12px;
+    color: var(--color-font-primary);
+    font-family: var(--font-family-secondary);
+}
+
+.card-select-item-option-icon i {
+    color: var(--color-font-primary);
+}
+
+@media screen and (max-width: 768px) {
+
+    .card-select-actions {
+        position: initial;
+        display: flex;
+        justify-content: center;
+    }
+
+    .card-select-item {
+        width: 50%;
+    }
+    
+}

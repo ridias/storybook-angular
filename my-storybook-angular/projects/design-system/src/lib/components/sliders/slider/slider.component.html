@@ -1,0 +1,18 @@
+<div class="slider-component"
+    [ngStyle]="{
+        '--color-slider-thumb': colorSliderThumb,
+        '--color-range-thumb': colorRangeThumb,
+        '--color-thumb-hover': colorThumbHover,
+        '--color-thumb-active-focus': colorThumbActiveFocus 
+    }">
+    <div class="slider-component-input">
+        <input type="range" 
+            class="range-input"
+            [style.background]="bgcolor"
+            [min]="minValue" 
+            [max]="maxValue" 
+            [(ngModel)]="value"
+            (change)="setValue()"/> 
+        <div class="slider-value">{{ value }}</div>
+    </div>
+</div>

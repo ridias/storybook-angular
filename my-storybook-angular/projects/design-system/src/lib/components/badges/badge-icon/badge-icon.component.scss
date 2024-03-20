@@ -1,0 +1,21 @@
+.badge-icon {
+    padding: 5px 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    min-width: 100px;
+    width: 100%;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-icon i {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.badge-icon span {
+    margin-right: 5px;
+}

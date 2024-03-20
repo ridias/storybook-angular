@@ -1,0 +1,28 @@
+<div class="card-full-3f" 
+    [style.background]="bgColor">
+    <div class="card-full-3f-header">
+        <div *ngIf="isLoading">
+            <span class="loader" 
+                [style.border-color]="isLoadingColor"
+                [style.border-bottom-color]="'transparent'">
+            </span>
+        </div>
+
+        <div *ngIf="!isLoading" class="card-full-3f-header-values">
+            <div class="card-full-3f-header-val"
+                [style.color]="colorValueMain">
+                {{ valueMain }}
+            </div>
+            <div class="card-full-3f-val"
+                [style.color]="colorValue">
+                {{ value }}            
+            </div>
+        </div>
+    </div>
+    <div class="card-full-3f-footer">
+        <div class="card-full-3f-footer-val"
+            [style.color]="colorDescription">
+            {{ description }}
+        </div>
+    </div>
+</div>

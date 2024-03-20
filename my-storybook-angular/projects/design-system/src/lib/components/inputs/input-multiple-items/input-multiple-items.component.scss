@@ -1,0 +1,121 @@
+.multiple-items-input {
+    display: flex;
+    width: 100%;
+    height: 35px;
+    position: relative;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.multiple-items-input-bar {
+    flex: 80%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-top: 1px solid var(--border-color-input);
+    border-bottom: 1px solid var(--border-color-input);
+    border-left: 1px solid var(--border-color-input);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+}
+
+.multiple-items-input-bar input {
+    width: 100%;
+    padding:  0px 15px;
+    height: 100%;
+    outline: none;
+    border: none;
+}
+
+.multiple-items-input-btn {
+    flex: 20%;
+    height: 100%;
+    background-color: var(--bgcolor-btn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    min-width: 50px;
+    border: 1px solid var(--border-color-btn);
+}
+
+.multiple-items-input-btn:hover {
+    background-color: var(--bgcolor-btn-hover);
+    border: 1px solid var(--bgcolor-btn-hover);
+    cursor: pointer;
+}
+
+.multiple-items-input-list {
+    position: absolute;
+    top: 38px;
+    width: 100%;
+    height: 240px;
+    border: 1px solid var(--border-color-input);
+    z-index: 999;
+    border-radius: 5px;
+}
+
+.multiple-items-input-list-header {
+    display: flex;
+    height: 40px;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color-input);
+}
+
+.multiple-items-input-list-header-search {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.multiple-items-input-list-header-search input {
+    border: 1px solid var(--border-color-input);
+    width: 100%;
+    padding-left: 50px;
+    outline: none;
+    border-radius: 5px;
+}
+
+.multiple-items-input-list-header-search i {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    z-index: 1000;
+    color: black;
+}
+
+.multiple-items-input-list-content {
+    width: 100%;
+    height: 180px;
+    overflow: auto;
+}
+
+.multiple-items-input-list-item {
+    display: flex;
+    width: 100%;
+    padding: 10px 15px;
+    cursor: pointer
+}
+
+.multiple-items-input-list-item:hover {
+    background-color: var(--bgcolor-hover-item);
+}
+
+.multiple-items-input-list-item-description {
+    flex: 90%;
+    cursor: pointer;
+}
+
+.multiple-items-input-list-item-check {
+    flex: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.multiple-items-input-list-item-check input {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}

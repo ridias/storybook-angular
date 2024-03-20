@@ -1,0 +1,18 @@
+<div class="card-icon"
+    [style.color]="color"
+    [style.background-color]="bgColor">
+    <div class="card-icon-title"
+        [style.border-bottom-color]="borderColor">
+        <span [style.font-size.px]="fontSizeTitle">{{ titleCard }}</span>
+        <div class="card-icon-side">
+            <i [class]="iconClass" 
+                [style.color]="iconColor"
+                [style.font-size.px]="fontSizeIcon"
+                [style.margin-top.px]="marginTopIcon">
+            </i>
+        </div>
+    </div>
+    <div class="card-icon-content">
+        <ng-content></ng-content>
+    </div>
+</div>

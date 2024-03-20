@@ -1,0 +1,17 @@
+<div class="navbreadcrumb">
+    <div class="navbreadcrumb-content">
+        <span *ngFor="let item of navBreadcrumb"
+            [style.color]="color">
+            <a (click)="redirectTo(item[1])" 
+                [style.color]="color">
+                {{ item[0] }}
+            </a>
+            <span *ngIf="windowWidth > 576">&nbsp;-&nbsp;</span>  
+        </span>
+        
+        <a class="nav-breadcrumb-active"
+            [style.color]="colorActive">
+            <span> {{ currentTitlePage }}</span>
+        </a>
+    </div>
+</div>

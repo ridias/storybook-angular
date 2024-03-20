@@ -1,0 +1,23 @@
+<div class="card-description-value" 
+    [style.background]="bgColor">
+    <div class="card-description-value-header">
+        <div *ngIf="isLoading">
+            <span class="loader" 
+                [style.border-color]="isLoadingColor"
+                [style.border-bottom-color]="'transparent'">
+            </span>
+        </div>
+
+        <div *ngIf="!isLoading" 
+            class="card-description-value-header-val"
+            [style.color]="colorDescription">
+            {{ value }}
+        </div>
+    </div>
+    <div class="card-description-value-footer">
+        <div class="card-description-value-footer-val"
+            [style.color]="colorValue">
+            {{ description }}
+        </div>
+    </div>
+</div>

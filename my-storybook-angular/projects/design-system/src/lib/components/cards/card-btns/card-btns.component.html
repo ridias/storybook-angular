@@ -1,0 +1,25 @@
+<div class="card-btns"
+    [ngStyle]="{
+        '--color-border': colorBorder,
+        '--color': color,
+        '--color-active': colorActive,
+        '--bgcolor-btn': bgColorBtn,
+        '--bgcolor-btn-active': bgColorBtnActive
+    }"
+    [style.background-color]="bgColor">
+    <div class="card-btns-header">
+        <div class="card-btns-title">
+            <span>{{ titleCard }}</span>
+        </div>
+        <div class="card-btns-list">
+            <div [ngClass]="item.active ? 'card-btns-list-btn active' : 'card-btns-list-btn'" 
+                *ngFor="let item of itemsBtns"
+                (click)="triggerBtn(item.id)">
+                {{ item.value }}
+            </div>
+        </div>
+    </div>
+    <div class="card-btns-content">
+        <ng-content></ng-content>
+    </div>
+</div>

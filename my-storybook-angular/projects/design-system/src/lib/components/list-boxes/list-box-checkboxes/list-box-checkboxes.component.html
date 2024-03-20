@@ -1,0 +1,35 @@
+<div class="list-box-checkboxes"
+    [ngStyle]="{
+        '--bgcolor-hover': bgColorHover,
+        '--bgcolor-btn': bgColorBtn,
+        '--bgcolor-hover-btn': bgColorHoverBtn,
+        '--color': color,
+        '--color-hover': colorHover
+    }">
+    <div class="list-box-checkboxes-header">
+        <div class="list-box-checkboxes-header-search">
+            <input type="text" 
+                [style.border-color]="colorBorder"
+                [placeholder]="placeholder"
+                (keyup)="searchByValue($event)">
+        </div>
+        <div class="list-box-checkboxes-header-clean">
+            <button (click)="changeStatusSelectAll()">{{ btnText }}</button>
+        </div>
+    </div>
+    <div class="list-box-checkboxes-content"
+        [style.border-color]="colorBorder"
+        [style.background-color]="bgColor">
+        <div class="list-box-checkbox-item"
+            [style.border-bottom-color]="colorBorder" 
+            *ngFor="let item of items"
+            (click)="setChecked(item)">
+            <div class="list-box-checkbox-item-description">
+                {{ item.optionDescription }}
+            </div>
+            <div class="list-box-checkbox-item-input">
+                <input type="checkbox" [checked]="item.active">
+            </div>
+        </div>
+    </div>
+</div>

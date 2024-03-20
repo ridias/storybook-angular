@@ -1,0 +1,23 @@
+<div class="pagination-simple"
+    [ngStyle]="{
+        '--color-border-btns': colorBorderBtns,
+        '--bg-color-btns': bgColorBtns,
+        '--bg-color-hover-btns': bgHoverColorBtns,
+        '--color-icon': colorIcon,
+        '--color-hover-icon': colorHoverIcon
+    }">
+    <div class="pagination-simple-btns">
+        <button [disabled]="isDisablePreviousButton" 
+            (click)="previousPage()">
+            <i class="general-icon-sm bi bi-chevron-left"></i>
+        </button>
+        <button [disabled]="isDisableNextButton" 
+            (click)="nextPage()">
+            <i class="general-icon-sm bi bi-chevron-right"></i>
+        </button>
+    </div>
+
+    <div class="pagination-simple-txts">
+        <span>Pàgina {{ currentPage }} - {{ totalPages }}</span>
+    </div>
+</div>

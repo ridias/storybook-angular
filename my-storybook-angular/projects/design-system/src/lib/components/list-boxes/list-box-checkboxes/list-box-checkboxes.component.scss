@@ -1,0 +1,93 @@
+.list-box-checkboxes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.list-box-checkboxes-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 3px;
+}
+
+.list-box-checkboxes-header-search {
+    flex: 5;
+    margin-right: 5px;
+    width: 100%;
+    display: flex;
+}
+
+.list-box-checkboxes-header-search input {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.list-box-checkboxes-header-clean {
+    flex: 2;
+    width: 100%;
+    display: flex;
+}
+
+.list-box-checkboxes-header-clean button {
+    font-size: 12px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgcolor-btn);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: var(--color);
+    border: 1px solid var(--bgcolor-btn);
+    font-weight: 600;
+}
+
+.list-box-checkboxes-header-clean button:hover {
+    background-color: var(--bgcolor-hover-btn);
+    color: var(--color-hover);
+    border: 1px solid var(--bgcolor-hover-btn);
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.list-box-checkboxes-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 5px;
+}
+
+.list-box-checkbox-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.list-box-checkbox-item:last-child {
+    border-bottom: none;
+}
+
+.list-box-checkbox-item:hover {
+    background-color: var(--bgcolor-hover);
+}
+
+.list-box-checkbox-item 
+.list-box-checkbox-item-input input[type=checkbox] {
+    cursor: pointer;
+}

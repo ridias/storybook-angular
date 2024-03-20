@@ -1,0 +1,53 @@
+/* icons */
+.general-icon-sm, 
+.general-icon-extra-sm, 
+.general-icon-md {
+    display: inline-block;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.general-icon-extra-sm {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.general-icon-sm {
+    width: 15px;
+    height: 15px;
+    font-size: 16px;
+}
+
+.general-icon-md {
+    width: 20px;
+    height: 20px;
+    font-size: 24px;
+}
+
+/* spinners */
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-width: 5px;
+    border-style: solid;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");

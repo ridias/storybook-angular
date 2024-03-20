@@ -1,0 +1,16 @@
+<div
+    [ngStyle]="{
+        '--color-checked': colorChecked,
+        '--color-disable': colorDisable,
+        '--color-unchecked': colorUnchecked,
+        '--bgcolor': bgcolor
+    }">
+    <label class="switch">
+        <input type="checkbox" 
+            name="toggleInput" 
+            [checked]="active"
+            [disabled]="disabled" 
+            (click)="changeActive()">
+        <span [ngClass]="{'slider-disabled round': disabled, 'slider round': !disabled }" ></span>
+    </label>
+</div>

@@ -1,0 +1,75 @@
+.semicircle-progress {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-onbg-secondary);
+    border-radius: 4px;
+}
+
+.semicircle-progress-header {
+    width: 100%;
+    padding: 5px 10px;
+    font-family: var(--font-family-secondary);
+    font-size: 14px;
+}
+
+.semicircle-progress-kpi {
+    position: relative;
+}
+
+.half-circle {
+    width: 150px;
+    height: 75px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-width: 30px;
+    border-style: solid;
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.half-circle:hover {
+    cursor: pointer;
+}
+
+.icon-arrow {
+    width: 14px;
+    height: 68px;
+    background-size: cover;
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-transform-origin: bottom center;
+    -moz-transform-origin: bottom center;
+    -o-transform-origin: bottom center;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    transition: 0.2s transform;
+}
+
+.semicircle-progress-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.semicircle-progress-details-val, 
+.semicircle-progress-details-description {
+    color: var(--color-font-primary);
+    font-family: var(--font-family-secondary);
+} 
+
+.semicircle-progress-details-val {
+    font-size: 24px;
+}
+
+.semicircle-progress-details-description {
+    font-size: 16px;
+}

@@ -1,0 +1,15 @@
+<label class="label-checkbox"
+    [ngStyle]="{
+        '--bgcolor-checked': bgColorChecked,
+        '--bgcolor-unchecked': bgColorUnchecked,
+        '--bgcolor-hover': bgColorHover,
+        '--color-checkmark': colorCheckmark
+    }">
+    {{ label }}
+    <input class="input-checkbox" 
+        type="checkbox" 
+        [checked]="checked"
+        [attr.disabled]="disable ? true : null"
+        (change)="updateStatusCheckbox($event)" />
+        <span class="checkmark"></span>
+</label>

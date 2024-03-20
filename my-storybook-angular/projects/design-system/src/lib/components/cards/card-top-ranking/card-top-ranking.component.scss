@@ -1,0 +1,117 @@
+.card-top-rank {
+    display: flex;
+    height: 100%;
+    padding: 20px 40px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.card-top-rank
+.card-top-rank-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 3;
+}
+
+.card-top-rank
+.card-top-rank-left
+.card-top-rank-row {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card-top-rank
+.card-top-rank-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-top-rank
+.card-top-rank-right
+.card-top-rank-right-titles {
+    text-align: center;
+}
+
+.card-top-rank
+.card-top-rank-right
+.card-top-rank-right-titles
+.card-top-rank-right-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-font-primary);
+}
+
+.card-top-rank
+.card-top-rank-right
+.card-top-rank-right-titles
+.card-top-rank-right-subtitle {
+    font-size: 12px;
+    color: var(--color-font-primary);
+}
+
+.card-top-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-font-primary);
+}
+
+.icon {
+    width: 45px;
+    height: 45px;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-top-rank-right-icon {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 576px) {
+    .card-top-rank
+    .card-top-rank-left
+    .card-top-rank-row {
+        font-size: 13px;
+    }
+
+    .card-top-rank
+    .card-top-rank-right
+    .card-top-rank-right-titles
+    .card-top-rank-right-title {
+        font-size: 13px;
+    }
+
+    .card-top-rank
+    .card-top-rank-right
+    .card-top-rank-right-titles
+    .card-top-rank-right-subtitle {
+        font-size: 11px;
+    }
+
+    .card-top-empty  {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card-top-rank {
+        flex-direction: column;
+    }
+
+    .card-top-rank-left {
+        margin-bottom: 10px;
+    }
+}

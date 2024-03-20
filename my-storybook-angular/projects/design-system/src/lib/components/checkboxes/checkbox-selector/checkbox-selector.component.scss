@@ -1,0 +1,14 @@
+.checkbox-selector, .checkbox-selector-active {
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.checkbox-selector-icon {
+    margin-left: 10px;
+}

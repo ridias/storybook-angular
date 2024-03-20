@@ -1,0 +1,23 @@
+.button-icon-rounded {
+    padding: 10px;
+    background-color: var(--bgcolor);
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-icon-rounded:hover {
+    background-color: var(--bgcolor-hover);
+    border: 1px solid var(--bgcolor-hover);
+    cursor: pointer;
+}
+
+.button-icon-rounded i {
+    color: var(--color-icon);
+}
+
+.button-icon-rounded:hover i {
+    color: var(--color-icon-hover);
+}

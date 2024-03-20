@@ -1,0 +1,33 @@
+<div class="pagination"
+    [ngStyle]="{
+        '--color-border-btns': colorBorderBtns,
+        '--bg-color-btns': bgColorBtns,
+        '--bg-color-hover-btns': bgHoverColorBtns,
+        '--color-border-search': colorBorderSearch,
+        '--bg-color-search': bgColorSearch,
+        '--color-icon': colorIcon,
+        '--color-hover-icon': colorHoverIcon
+    }">
+    <button (click)="setToFirstPage()">
+        <i class="general-icon-sm bi bi-chevron-bar-left"></i>
+    </button>
+    <button (click)="previousPage()">
+        <i class="general-icon-sm bi bi-chevron-left"></i>
+    </button>
+    <div class="pagination-input">
+        <span class="ms-2 me-2 pagination-description">Pàgina </span>
+        <input class="search-page" 
+            #i type="text" 
+            [(ngModel)]="currentPage" 
+            (keyup.enter)="selectPage(i.value)"
+            (blur)="selectPage(i.value)"
+            (input)="formatInput($any($event).target)">
+        <span class="ms-2 me-2 pagination-description"> de {{ totalPages }}</span>
+    </div>
+    <button class="btn d-flex justify-content-center align-items-center" (click)="nextPage()">
+        <i class="general-icon-sm bi bi-chevron-right"></i>
+    </button>
+    <button class="btn" (click)="setToLastPage()">
+        <i class="general-icon-sm bi bi-chevron-bar-right"></i>
+    </button>
+</div>

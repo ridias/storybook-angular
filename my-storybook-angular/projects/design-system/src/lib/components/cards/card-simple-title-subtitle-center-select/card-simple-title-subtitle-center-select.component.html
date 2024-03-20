@@ -1,0 +1,57 @@
+<div class="card-simple-title-subtitle-center-select"
+    [style.background-color]="bgColor"
+    [style.border-color]="borderColor"
+    [style.border-width.px]="borderWidth"
+    [style.border-style]="borderStyle">
+    <div class="card-simple-title-subtitle-center-select-header"
+        [style.border-bottom-width.px]="headerBorderBottomWidthPx">
+        <span [style.font-size.px]="fontSizeTitle">{{ titleCard }}</span>
+        <span class="card-simple-title-subtitle-center-select-header-subtitle" 
+            [style.font-size.px]="fontSizeSubtitle">
+            {{ subtitleCard }}
+        </span>
+        <div class="card-simple-title-subtitle-center-select-icon">
+            <i [class]="icon"
+                [style.color]="iconColor" 
+                [style.font-size.px]="fontSizeIcon">
+            </i>
+        </div>
+    </div>
+
+    <div class="card-select-actions"
+        [style.background-color]="bgColor"
+        [style.width]="widthSelect"
+        [style.bottom.px]="bottomSelect"
+        [style.right.px]="rightSelect">
+        <div class="card-select-item">
+            <div class="card-select-item-select" (click)="changeIsOpen()">
+                <div class="card-select-item-description"
+                    [style.color]="colorOptionSelected"
+                    [style.font-weight]="fontWeightOptionSelected">
+                    {{ valueSelect }}
+                </div>
+                <div class="card-select-item-icon">
+                    <i class="general-icon-sm bi bi-caret-down-fill"></i>
+                </div>
+            </div>
+            <div class="card-select-item-list"
+                [style.background-color]="bgColorSelect" 
+                *ngIf="isOpen">
+                <div class="card-select-item-option" 
+                    *ngFor="let option of options"
+                    (click)="selectOption(option)">
+                    <div class="card-select-item-option-description">
+                        {{ option.value }}
+                    </div>
+                    <div class="card-select-item-option-icon">
+                        <i class="general-icon-sm bi bi-check-lg" *ngIf="option.active"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-simple-title-subtitle-center-select-content">
+        <ng-content></ng-content>
+    </div>
+</div>

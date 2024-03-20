@@ -1,0 +1,35 @@
+<div class="kpi-semicircle">
+    <div class="kpi-semicircle-loading" *ngIf="isLoading > 0">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+    <div class="multi-graph margin" [hidden]="isLoading > 0"
+        [style.width.px]="widthPx"
+        [style.height.px]="heightPx">
+        <div class="graph" 
+            [ngStyle]="{'--percentage': 100, '--fill': colorRight }"
+            [style.width.px]="widthPx"
+            [style.height.px]="heightPx"
+            [style.border-radius]="'0 0 ' + widthPx + 'px ' + widthPx + 'px'"
+            [style.border-width.px]="borderPx">
+        </div>
+        <div class="graph" 
+            [ngStyle]="{'--percentage': 50, '--fill': colorLeft }"
+            [style.width.px]="widthPx"
+            [style.height.px]="heightPx"
+            [style.border-radius]="'0 0 ' + widthPx + 'px ' + widthPx + 'px'"
+            [style.border-width.px]="borderPx">
+        </div>
+        <div class="icon-arrow"
+            [style.left.%]="iconArrowLeftPercentage"
+            [style.border-bottom-width.px]="borderBottomWidth"
+            [style.border-bottom-color]="colorArrow"
+            [style.transform]="'rotate(' + currentDeg + 'deg)'">
+        </div>
+    </div>
+
+    <div class="kpi-semicircle-description">
+        {{ description }}
+    </div>
+</div>

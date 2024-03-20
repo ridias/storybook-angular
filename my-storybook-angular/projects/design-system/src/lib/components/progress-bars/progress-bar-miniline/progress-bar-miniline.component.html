@@ -1,0 +1,28 @@
+<div class="progress-simple"
+    [style.width]="width"
+    [style.height]="height">
+    <div class="progress-simple-horizontal"
+        [style.background-color]="colorBar">
+        <div class="progress-simple-filled-horizontal"
+            [style.width]="filledBarInPercentage + '%'" 
+            [style.background]="colorFilled">
+        </div>
+    </div>
+    <div class="progress-simple-mini-line" 
+        [style.left]="positionMiniLineInPercentage + '%'"
+        [style.background]="colorMiniLine">
+        <div class="progress-simple-window" 
+            *ngIf="showCompareValue"
+            [style.margin-top.px]="marginTopCompareValue">
+            <div class="progress-simple-window-card"
+                [style.top]="topCompareValue">
+                <span [style.font-size.px]="fontSizeCompareValue"
+                    [style.color]="colorCompareValue"
+                    [style.font-family]="fontFamily"
+                    [style.font-weight]="fontWeight">
+                    {{ compareValueStr }}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

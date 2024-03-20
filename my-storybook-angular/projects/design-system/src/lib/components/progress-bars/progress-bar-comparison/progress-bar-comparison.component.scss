@@ -1,0 +1,49 @@
+.progress-bar-comparison {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.progress-bar-comparison-description, 
+.progress-bar-comparison-value {
+    width: 100%;
+    display: flex;
+}
+
+.progress-bar-comparison-description span {
+    font-size: 10px;
+    flex: 1;
+}
+
+.progress-bar-comparison-value span {
+    font-size: 10px;
+    flex: 1;
+}
+
+.progress-bar-comparison-description span:first-child, 
+.progress-bar-comparison-value span:first-child {
+    text-align: left;
+}
+
+.progress-bar-comparison-description span:last-child, 
+.progress-bar-comparison-value span:last-child{
+    text-align: right;
+}
+
+.progress-bar-comparison-design {
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.progress-bar-comparison-design 
+.progress-bar-comparison-left {
+    height: 100%;
+    float: left;
+}
+
+.progress-bar-comparison-design 
+.progress-bar-comparison-right {
+    height: 100%;
+    float: left;
+}

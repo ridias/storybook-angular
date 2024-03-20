@@ -1,0 +1,19 @@
+<div class="card-simple-title-center"
+    [style.background-color]="bgColor"
+    [style.border-color]="borderColor"
+    [style.border-width.px]="borderWidth"
+    [style.border-style]="borderStyle">
+    <div class="card-simple-title-center-header"
+        [style.border-bottom-width.px]="headerBorderBottomWidthPx">
+        <span [style.font-size.px]="fontSizeTitle">{{ titleCard }}</span>
+        <div class="card-simple-title-center-icon">
+            <i [class]="icon"
+                [style.color]="iconColor" 
+                [style.font-size.px]="fontSizeIcon">
+            </i>
+        </div>
+    </div>
+    <div class="card-simple-title-center-content">
+        <ng-content></ng-content>
+    </div>
+</div>

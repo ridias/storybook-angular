@@ -1,0 +1,59 @@
+.card-full-3f {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.card-full-3f
+.card-full-3f-header {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-full-3f
+.card-full-3f-header
+.card-full-3f-header-values {
+    margin-top: 25px;
+}
+
+.card-full-3f
+.card-full-3f-header
+.card-full-3f-header-values
+.card-full-3f-header-val {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.card-full-3f-val {
+    font-size: 16px;
+    text-align: center;
+}
+
+.card-full-3f
+.card-full-3f-footer {
+    flex: 2;
+}
+
+.card-full-3f
+.card-full-3f-footer
+.card-full-3f-footer-val {
+    font-size: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+
+    .card-full-3f
+    .card-full-3f-header
+    .card-full-3f-header-values
+    .card-full-3f-header-val {
+        font-size: 24px;
+    }
+}

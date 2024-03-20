@@ -1,0 +1,35 @@
+<div class="search-input"
+    [ngStyle]="{
+        '--color-icon': colorIcon,
+        '--color-icon-hover': colorIconHover,
+        '--bgcolor-hover': bgColorHover,
+        '--bgcolor': bgColor
+    }">
+    <div class="search-input-bar">
+        <input type="text"
+            [style.background-color]="bgColor" 
+            [style.color]="color"
+            [style.border-color]="colorBorder"
+            name="searchValue" 
+            class="search-input-form" 
+            placeholder="Buscar..."
+            [(ngModel)]="searchValue"
+            (keypress)="checkIfEnterPressed($event)"
+            autocomplete="off"/>
+    </div>
+    <div class="search-input-btn" (click)="sendSearchValue()">
+        <div class="search-input-btn-icon"
+            [style.border-color]="colorBorder">
+            <i class="general-icon-sm bi bi-search" 
+                *ngIf="!isLoading">
+            </i>
+
+            <div class="spinner-border" 
+                role="status" 
+                *ngIf="isLoading" 
+                style="width: 25px; height: 25px">
+                <span class="sr-only"></span>
+            </div>
+        </div>
+    </div>
+</div>

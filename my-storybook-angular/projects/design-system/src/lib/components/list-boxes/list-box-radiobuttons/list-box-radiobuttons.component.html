@@ -1,0 +1,32 @@
+<div class="list-box-radiobuttons"
+    [ngStyle]="{
+        '--bgcolor-hover': bgColorHover,
+        '--bgcolor-btn': bgColorBtn,
+        '--bgcolor-hover-btn': bgColorHoverBtn,
+        '--color': color,
+        '--color-hover': colorHover
+    }">
+    <div class="list-box-radiobuttons-header">
+        <div class="list-box-radiobuttons-header-search">
+            <input type="text" 
+                [style.border-color]="colorBorder"
+                [placeholder]="placeholder"
+                (keyup)="searchByValue($event)">
+        </div>
+    </div>
+    <div class="list-box-radiobuttons-content"
+        [style.border-color]="colorBorder"
+        [style.background-color]="bgColor">
+        <div class="list-box-radiobutton-item" 
+            [style.border-bottom-color]="colorBorder" 
+            *ngFor="let item of items"
+            (click)="setChecked(item)">
+            <div class="list-box-radiobutton-item-description">
+                {{ item.optionDescription }}
+            </div>
+            <div class="list-box-radiobutton-item-input">
+                <input type="radio" [checked]="item.active">
+            </div>
+        </div>
+    </div>
+</div>

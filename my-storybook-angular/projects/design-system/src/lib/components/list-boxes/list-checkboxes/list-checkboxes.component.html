@@ -1,0 +1,34 @@
+<div class="list-checkboxes"
+    [ngStyle]="{
+        '--color-border': colorBorder,
+        '--color': color,
+    }">
+    <div class="list-checkboxes-search">
+        <input type="text" 
+            spellcheck="false"
+            class="input-custom-css" 
+            name="search" 
+            placeholder="Buscar..."
+            (keyup)="search($event)"/>
+    </div>
+    <div class="list-checkboxes-content">
+        <div class="list-checkboxes-rows">
+            <label class="list-checkboxes-row-input">
+                <input type="checkbox" 
+                    name="checkbox" 
+                    [(ngModel)]="allItemsChecked" 
+                    (change)="updateStatusAllItems()"/>
+                Seleccionar tots
+            </label>
+
+            <label class="list-checkboxes-row-input" 
+                *ngFor="let option of values">
+                <input type="checkbox" 
+                    [name]="option.optionDescription" 
+                    [checked]="option.active"
+                    (change)="updateStatusDevice(option.value, !option.active)"/>
+                {{ option.optionDescription }}
+            </label>
+        </div>
+    </div>
+</div>

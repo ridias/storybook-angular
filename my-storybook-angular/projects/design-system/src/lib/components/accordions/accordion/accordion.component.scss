@@ -1,0 +1,31 @@
+.accordion-component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 50px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.accordion-header {
+    height: 50px;
+    padding: 0px 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-component.is-open {
+    max-height: 100%;
+    transition: max-height 0.2s ease-in-out;
+}
+
+.accordion-component.is-open .accordion-content {
+    padding: 5px 10px;
+}
+
+.accordion-header-icon i {
+    transition: transform 0.2s ease-in-out;
+}
+

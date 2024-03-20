@@ -1,0 +1,45 @@
+<div class="card-total-bar">
+    <div class="card-total-bar-top">
+        <div class="card-total-bar-top-value">
+            <div *ngIf="isLoading">
+                <span class="loader" 
+                    [style.border-color]="isLoadingColor"
+                    [style.border-bottom-color]="'transparent'">
+                </span>
+            </div>
+            <span [style.color]="colorFilled" 
+                *ngIf="!isLoading">{{ currentValue }}
+            </span>
+        </div>
+        <div class="card-total-bar-top-titles">
+            <div class="card-total-bar-top-title"
+                [style.color]="colorTitle">
+                {{ titleComponent }}
+            </div>
+            <div class="card-total-bar-top-subtitle"
+                [style.color]="colorSubtitle">
+                {{ subtitle }}
+            </div>
+        </div>
+    </div>
+    <div class="card-total-bar-bottom">
+        <div class="card-total-bar-horizontal"
+            [style.background-color]="bgColorBar">
+            <div class="card-total-bar-filled-horizontal"
+                [style.width]="filledBarInPercentage + '%'" 
+                [style.background-color]="colorFilled">
+            </div>
+        </div>
+        <div class="card-total-bar-mini-line" 
+            [style.left]="positionMiniLineInPercentage + '%'"
+            [style.background]="colorMiniLine">
+            <div class="card-total-bar-window" *ngIf="isToolTip">
+                <div class="card-total-bar-window-card"
+                    [style.background]="colorMiniLine"
+                    [style.color]="colorWindow">
+                    {{ compareValue }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

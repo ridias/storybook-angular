@@ -1,0 +1,52 @@
+<div class="card-select"
+    [ngStyle]="{
+        '--bgcolor-hover': bgColorHover
+    }"
+    [style.background-color]="bgColor">
+    <div class="card-select-header"
+        [style.border-bottom-color]="colorBorder">
+        <div class="card-select-title">
+            <span>{{ titleCard }}</span>
+        </div>
+        <div class="card-select-actions">
+            <div class="card-select-item">
+                <div class="card-select-item-select" 
+                    (click)="changeIsOpen()"
+                    [style.border-color]="colorBorder">
+                    <div class="card-select-item-description"
+                        [style.color]="color">
+                        {{ value }}
+                    </div>
+                    <div class="card-select-item-icon">
+                        <i class="general-icon-sm bi bi-caret-down-fill"
+                            [style.color]="colorIcon">
+                        </i>
+                    </div>
+                </div>
+                <div class="card-select-item-list"
+                    [style.background-color]="bgColor" 
+                    [style.border-color]="colorBorder"
+                    *ngIf="isOpen">
+                    <div class="card-select-item-option"
+                        [style.border-bottom-color]="colorBorder" 
+                        *ngFor="let option of options"
+                        (click)="selectOption(option)">
+                        <div class="card-select-item-option-description"
+                            [style.color]="color">
+                            {{ option.value }}
+                        </div>
+                        <div class="card-select-item-option-icon">
+                            <i class="general-icon-sm bi bi-check-lg" 
+                                *ngIf="option.active"
+                                [style.color]="colorIcon">
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-select-content">
+        <ng-content></ng-content>
+    </div>
+</div>

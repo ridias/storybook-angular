@@ -1,0 +1,26 @@
+<div class="progress-bar-comparison"
+    [style.width]="width"
+    [style.height]="height">
+    <div class="progress-bar-comparison-description"
+        [style.color]="color">
+        <span>{{ descriptionLeft }}</span>
+        <span>{{ descriptionRight }}</span>
+    </div>
+    <div class="progress-bar-comparison-design">
+        <div class="progress-bar-comparison-left" 
+            [ngbTooltip]="valueLeft"
+            [style.background-color]="colorFillLeft"
+            [ngStyle]="{'width': percentageLeft + '%' }" >
+        </div>
+        <div class="progress-bar-comparison-right" 
+            [ngbTooltip]="valueRight"
+            [style.background-color]="colorFillRight"
+            [ngStyle]="{'width': percentageRight + '%' }">
+        </div>
+    </div>
+    <div class="progress-bar-comparison-value"
+        [style.color]="color">
+        <span>{{ percentageLeft }} %</span>
+        <span>{{ percentageRight }} %</span>
+    </div>
+</div>

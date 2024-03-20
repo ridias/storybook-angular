@@ -1,0 +1,14 @@
+<button 
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color-border': colorBorder,
+        '--color-icon': iconColor,
+        '--color-icon-hover': iconColorHover
+    }"
+    class="button-icon"
+    [disabled]="disabled"
+    (click)="triggedButton()">
+    <i [class]="iconClass"
+        [style.background-color]="colorIcon"></i>
+</button>
