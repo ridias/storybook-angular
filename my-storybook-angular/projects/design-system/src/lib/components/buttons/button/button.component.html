@@ -5,8 +5,14 @@
         '--color-hover': colorHover,
         '--color': color,
     }"
-    class="button-class"
-    [disabled]="disabled"
+    [class]="disabled || isLoading ? 'button-class-disable' : 'button-class'"
+    [disabled]="disabled || isLoading"
     (click)="triggedButton()">
+    <div *ngIf="isLoading">
+        <span class="loader loader-sm" 
+            [style.border-color]="isLoadingColor"
+            [style.border-bottom-color]="'transparent'">
+        </span>
+    </div>
     {{ value }}
 </button>

@@ -1,0 +1,43 @@
+<div class="select-search"
+    [ngStyle]="{
+        '--color-border': colorBorder,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-icon': colorIcon,
+        '--color-icon-hover': colorIconHover
+    }">
+    <div class="select-search-bar">
+        <input type="text" 
+            [value]="inputValue"
+            [placeholder]="placeholder"
+            readonly>
+    </div>
+    <div class="select-search-btn" 
+        (click)="switchOptions()">
+        <i class="general-icon-sm bi bi-caret-down-fill"></i>
+    </div>
+
+    <div [ngClass]="isOpen ? 'select-search-list-opened' : 'select-search-list'">
+        <div class="select-search-list-header">
+            <div class="select-search-list-header-search">
+                <i class="general-icon-sm bi bi-search"></i>
+                <input type="text" 
+                    (keyup)="searchByName($event)"
+                    class="select-search-list-header-search" 
+                    placeholder="Buscar...">
+            </div>
+        </div>
+
+        <div class="select-search-list-content">
+            <div class="select-search-list-item" 
+                *ngFor="let item of optionsCache"
+                (click)="selectOption(item)">
+                <div class="select-search-list-item-description">
+                    {{ item.optionDescription }}
+                </div>
+            </div>
+        </div>    
+    </div>
+</div>

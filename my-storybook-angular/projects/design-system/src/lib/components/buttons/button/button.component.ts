@@ -15,6 +15,8 @@ export class ButtonComponent {
     @Input() bgColor: string = "orange";
     @Input() bgColorHover: string = "orangered";
     @Input() colorBorder: string = "orange";
+    @Input() isLoading: boolean = false;
+    @Input() isLoadingColor: string = ""
 
     @Output() clicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 

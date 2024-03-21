@@ -1,0 +1,16 @@
+<ng-template #modal class="modal-view">
+    <div class="modal-header">
+      <h5 class="modal-title">{{ modalTitle }}</h5>
+    </div>
+    <div class="modal-body">
+        <ng-content></ng-content>
+    </div>
+    <div class="modal-footer">
+        <button type="button"
+                class="btn btn-cancel"
+                style="outline: none;"
+                (click)="close()">
+                Tancar
+        </button>
+      </div>
+</ng-template>

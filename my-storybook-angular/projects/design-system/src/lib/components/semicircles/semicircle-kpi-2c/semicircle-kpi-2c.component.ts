@@ -18,7 +18,7 @@ export class SemicircleKpi2cComponent implements OnInit {
     @Input() borderBottomWidth: number = 75;
     @Input() colorLeft: string = "#4FBF9D";
     @Input() colorRight: string = "#EB895F";
-    @Input() colorArrow: string = "var(--color-font-primary)";
+    @Input() colorArrow: string = "grey";
     
     ngOnInit(): void {
         

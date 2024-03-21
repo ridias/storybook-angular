@@ -17,43 +17,47 @@ const meta: Meta<ButtonIconRoundedComponent> = {
         disabled: {
             description: 'If the button is disabled',
             type: 'boolean',
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         icon: {
             description: 'Icon',
             type: 'string',
-            defaultValue: 'bi bi-person'
+            defaultValue: { summary: 'bi bi-person' }
         },
         bgColor: {
             description: 'Background color of the button',
             type: 'string',
-            defaultValue: 'orange'
+            defaultValue: { summary: 'orange' }
         },
         bgColorHover: {
             description: 'Background color hover of the button',
             type: 'string',
-            defaultValue: 'orangered'
+            defaultValue: { summary: 'orangered' }
         },
         colorBorder: {
             description: 'Border color',
             type: 'string',
-            defaultValue: 'orange'
+            defaultValue: { summary: 'orange' }
         },
         iconColor: {
             description: 'Color of the icon',
             type: 'string',
-            defaultValue: 'white'
+            defaultValue: { summary: 'white' }
         },
         iconColorHover: {
             description: 'Color hover of the icon',
             type: 'string',
-            defaultValue: 'white'
+            defaultValue: { summary: 'white' }
         },
         iconSize: {
             description: 'Size of the icon',
             type: 'string',
-            defaultValue: ''
+            defaultValue: { summary: 'md' }
+        },
+        clicked: {
+            action: "clicked"
         }
+        
     }
 };
 
@@ -65,3 +69,47 @@ export const ButtonIconRoundedDefault: Story = {
     
   },
 };
+
+export const ButtonIconRoundedExtraSm: Story = {
+    args: {
+      iconSize: "extra-sm"
+    }
+};
+
+export const ButtonIconRoundedSm: Story = {
+    args: {
+      iconSize: "sm"
+    }
+};
+
+export const ButtonIconRoundedMd: Story = {
+    args: {
+      iconSize: "md"
+    }
+};
+
+export const ButtonIconRoundedLg: Story = {
+    args: {
+      iconSize: "lg"
+    }
+};
+
+export const ButtonIconRoundedExtraLg: Story = {
+    args: {
+      iconSize: "extra-lg"
+    }
+};
+
+export const ButtonIconRoundedLoading: Story = {
+    args: {
+        isLoading: true,
+        isLoadingColor: "white"
+    }
+}
+
+export const ButtonIconRoundedDisable: Story = {
+    args: {
+        disabled: true
+    }
+}
+

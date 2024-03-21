@@ -1,6 +1,11 @@
 .kpi-semicircle {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
   
   .kpi-semicircle-loading {
@@ -45,7 +50,6 @@
       top: 0px !important;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-bottom: 75px solid var(--color-font-primary);
       z-index: 99999;
       -webkit-transform-origin: bottom center;
       -moz-transform-origin: bottom center;

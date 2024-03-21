@@ -1,0 +1,17 @@
+<button 
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color': color,
+        '--color-hover': colorHover,
+        '--bgcolor-active': bgColorActive,
+        '--bgcolor-active-hover': bgColorActiveHover,
+        '--color-active': colorActive,
+        '--color-active-hover': colorActiveHover,
+        '--color-border': colorBorder
+    }"
+    [class]="active ? 'toggle-button-active' : 'toggle-button'"
+    [disabled]="disabled"
+    (click)="triggedButton()">
+    {{ value }}
+</button>

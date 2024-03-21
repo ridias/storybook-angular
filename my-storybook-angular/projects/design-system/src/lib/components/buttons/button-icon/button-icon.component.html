@@ -6,9 +6,16 @@
         '--color-icon': iconColor,
         '--color-icon-hover': iconColorHover
     }"
-    class="button-icon"
-    [disabled]="disabled"
+    [class]="disabled || isLoading ? 'button-icon-disable' : 'button-icon'"
+    [disabled]="disabled || isLoading"
     (click)="triggedButton()">
-    <i [class]="iconClass"
-        [style.background-color]="colorIcon"></i>
+    <div *ngIf="isLoading">
+        <span [class]="loadingClass" 
+            [style.border-color]="isLoadingColor"
+            [style.border-bottom-color]="'transparent'">
+        </span>
+    </div>
+
+    <i [class]="iconClass" *ngIf="!isLoading"
+        [style.color]="iconColor"></i>
 </button>

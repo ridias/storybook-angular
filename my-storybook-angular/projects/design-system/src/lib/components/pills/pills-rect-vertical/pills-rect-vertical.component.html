@@ -1,0 +1,20 @@
+<div class="pills-rect-vertical"
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-border': colorBorder
+    }">
+    <div class="pills-rect-vertical-side">
+        <div *ngFor="let option of pills" 
+            [ngClass]="option.disable ? 'pills-rect-vertical-btn disable' : option.active ? 'pills-rect-vertical-btn active' : 'pills-rect-vertical-btn'"
+            (click)="triggerBtn(option)">
+            <i [ngClass]="option.icon"></i>
+            <span>{{ option.value }}</span>
+        </div>
+    </div>
+    <div class="pills-rect-vertical-content">
+        <ng-content></ng-content>
+    </div>
+</div>

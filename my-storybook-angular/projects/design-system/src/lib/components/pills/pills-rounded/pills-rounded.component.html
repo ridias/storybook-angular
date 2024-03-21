@@ -1,0 +1,19 @@
+<div class="pills-rounded"
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-border': colorBorder
+    }">
+    <div class="pills-rounded-header">
+        <div *ngFor="let option of pills" 
+            [ngClass]="option.disable ? 'pills-rounded-btn disable' : option.active ? 'pills-rounded-btn active' : 'pills-rounded-btn'"
+            (click)="triggerBtn(option)">
+            <i [ngClass]="option.icon"></i>
+        </div>
+    </div>
+    <div class="pills-rounded-content">
+        <ng-content></ng-content>
+    </div>
+</div>

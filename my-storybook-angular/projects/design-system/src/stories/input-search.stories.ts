@@ -27,7 +27,7 @@ const meta: Meta<InputSearchComponent> = {
         bgColor: {
             description: "Background color of the input",
             type: "string",
-            defaultValue: { summary: "#eee" }
+            defaultValue: { summary: "#fdfdfd" }
         },
         colorBorder: {
             description: "Color border of the input",

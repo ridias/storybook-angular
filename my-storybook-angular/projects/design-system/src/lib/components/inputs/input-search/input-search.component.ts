@@ -10,7 +10,7 @@ export class InputSearchComponent implements OnInit {
     
     @Input() maxLength: number = 100;
     @Input() isLoading: boolean = false;
-    @Input() bgColor: string = "#eee";
+    @Input() bgColor: string = "#fdfdfd";
     @Input() colorBorder: string = "#ddd";
     @Input() colorIcon: string = "black";
     @Input() color: string = "black";

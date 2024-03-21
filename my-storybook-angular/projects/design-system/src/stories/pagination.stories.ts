@@ -17,58 +17,58 @@ const meta: Meta<PaginationComponent> = {
         totalPages: {
             description: "Total pages",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         currentPage: {
             description: "Current page",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         itemsPerPage: {
             description: "Items per page",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         colorBorderBtns: {
             description: "Color border buttons",
             type: "string",
-            defaultValue: "#ddd",
+            defaultValue: { summary: '#ddd' },
             control: "color"
         },
         bgColorBtns: {
             description: "Background color buttons",
             type: "string",
-            defaultValue: "#eee",
+            defaultValue: { summary: '#eee' },
             control: "color"
         },
         bgHoverColorBtns: {
             description: "Background color hover buttons",
             type: "string",
-            defaultValue: "#ddd",
+            defaultValue: { summary: '#ddd' },
             control: "color"
         },
         colorIcon: {
             description: "Color icon",
             type: "string",
-            defaultValue: "black",
+            defaultValue: { summary: 'black' },
             control: "color"
         },
         colorHoverIcon: {
             description: "Color icon hover",
             type: "string",
-            defaultValue: "black",
+            defaultValue: { summary: 'black' },
             control: "color"
         },
         colorBorderSearch: {
             description: "Color border input page",
             type: "string",
-            defaultValue: "#ddd",
+            defaultValue: { summary: '#ddd' },
             control: "color"
         },
         bgColorSearch: {
             description: "Background color input page",
             type: "string",
-            defaultValue: "#eee",
+            defaultValue: { summary: '#eee' },
             control: "color"
         },
         selectedPage: {

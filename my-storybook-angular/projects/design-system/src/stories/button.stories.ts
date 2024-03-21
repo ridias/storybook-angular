@@ -54,6 +54,9 @@ const meta: Meta<ButtonComponent> = {
             type: 'string',
             defaultValue: { summary: 'orange' },
             control: "color"
+        },
+        clicked: {
+            action: "clicked"
         }
     }
 }
@@ -73,14 +76,10 @@ export const ButtonDisable: Story = {
     }
 }
 
-export const ButtonLarge: Story = {
-    args: {
-        
-    }
-}
 
-export const ButtonSmall: Story = {
+export const ButtonLoading: Story = {
     args: {
-
+        isLoading: true,
+        isLoadingColor: "white"
     }
 }

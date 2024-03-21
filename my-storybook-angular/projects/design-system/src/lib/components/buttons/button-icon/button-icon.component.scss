@@ -1,4 +1,5 @@
-.button-icon {
+.button-icon,
+.button-icon-disable {
     padding: 10px;
     background-color: var(--bgcolor);
     border: 1px solid var(--color-border);
@@ -17,4 +18,15 @@
 
 .button-icon:hover i {
     color: var(--color-icon-hover);
+}
+
+.button-icon-disable {
+    opacity: 0.5;
+}
+
+.button-icon-disable:hover {
+    background-color: var(--bgcolor);
+    border: 1px solid var(--color-border);
+    color: var(--color);
+    opacity: 0.5;
 }

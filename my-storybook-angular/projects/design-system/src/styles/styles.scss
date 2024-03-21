@@ -10,28 +10,38 @@
 }
 
 .general-icon-extra-sm {
-    width: 10px;
-    height: 10px;
-    font-size: 10px;
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
 }
 
 .general-icon-sm {
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
     font-size: 16px;
 }
 
 .general-icon-md {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     font-size: 24px;
+}
+
+.general-icon-lg {
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+}
+
+.general-icon-extra-lg {
+    width: 48px;
+    height: 48px;
+    font-size: 48px;
 }
 
 /* spinners */
 
 .loader {
-    width: 48px;
-    height: 48px;
     border-width: 5px;
     border-style: solid;
     border-bottom-color: transparent;
@@ -39,9 +49,39 @@
     display: inline-block;
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
+}
 
-    @keyframes rotation {
+.loader-extra-sm {
+    width: 12px;
+    height: 12px;
+    border-width: 3px;
+}
+
+.loader-sm {
+    width: 16px;
+    height: 16px;
+    border-width: 3px;
+}
+
+.loader-md {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+}
+
+.loader-lg {
+    width: 36px;
+    height: 36px;
+    border-width: 3px;
+}
+
+.loader-extra-lg {
+    width: 48px;
+    height: 48px;
+    border-width: 3px;
+}
+
+@keyframes rotation {
     0% {
         transform: rotate(0deg);
     }

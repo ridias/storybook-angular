@@ -1,0 +1,50 @@
+.modal-view {
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+    background-color: white !important;
+    border-bottom: 1px solid #ddd !important;
+}
+
+.modal-header
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    background-color: white;
+}
+
+.modal-body p {
+    color: var(--color-font-primary);
+}
+
+.modal-footer {
+    background-color: white !important;
+    border-top: 1px solid #ddd !important;
+}
+
+.modal-footer .btn.btn-save {
+    background-color: grey;
+    border: 1px solid grey;
+    color: black;
+}
+
+.modal-footer .btn.btn-save:hover {
+    background-color: black;
+    border: 1px solid black;
+    transition: 0.2s all;
+}
+
+.modal-footer .btn.btn-cancel {
+    color: var(--color-font-primary);
+    background-color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.modal-footer .btn.btn-cancel:hover{
+    border: 1px solid black;
+    background-color: black;
+    color: black;
+}

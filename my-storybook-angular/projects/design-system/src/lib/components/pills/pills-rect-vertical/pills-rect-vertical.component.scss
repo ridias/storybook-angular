@@ -1,0 +1,80 @@
+.pills-rect-vertical {
+    width: 100%;
+    display: flex;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.pills-rect-vertical-side {
+    width: 175px;
+    margin-right: 25px;
+}
+
+.pills-rect-vertical-btn {
+    padding: 5px 10px;
+    height: 60px;
+    border: 1px solid var(--color-border);
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pills-rect-vertical-btn i {
+    margin-right: 5px;
+    color: var(--color);
+}
+
+.pills-rect-vertical-btn.active {
+    background-color: var(--bgcolor);
+    border: 1px solid var(--bgcolor);
+    color: var(--color-hover);
+}
+
+.pills-rect-vertical-btn.active i {
+    color: var(--color-hover);
+}
+
+.pills-rect-vertical-btn:hover {
+    background-color: var(--bgcolor-hover);
+    border: 1px solid var(--bgcolor-hover);
+    color: var(--color-hover);
+    transition: all 0.2s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.pills-rect-vertical-btn:hover i {
+    color: var(--color-hover);
+}
+
+.pills-rect-vertical-btn.disable {
+    color: var(--color);
+    opacity: 0.5;
+}
+
+.pills-rect-vertical-btn:hover.disable {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color);
+    opacity: 0.5;
+    cursor: initial;
+    box-shadow: none;
+}
+
+.pills-rect-vertical-btn.disable i {
+    color: var(--color);
+    opacity: 0.5;
+}
+
+.pills-rect-vertical-btn:hover.disable i {
+    color: var(--color);
+}
+
+.pills-rect-vertical-content {
+    width: 100%;
+    margin-left: 10px;
+    padding: 0px 5px;
+}

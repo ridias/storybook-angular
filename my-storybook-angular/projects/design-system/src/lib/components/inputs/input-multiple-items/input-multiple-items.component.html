@@ -20,7 +20,7 @@
         <i class="general-icon-sm bi bi-pen-fill"></i>
     </div>
 
-    <div class="multiple-items-input-list" *ngIf="isOpen"
+    <div [ngClass]="isOpen ? 'multiple-items-input-list-opened' : 'multiple-items-input-list'"
         [style.background-color]="bgColorInput">
         <div class="multiple-items-input-list-header">
             <div class="multiple-items-input-list-header-search">

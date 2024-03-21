@@ -16,11 +16,17 @@ export class ButtonIconComponent {
     @Input() iconColor: string = "white";
     @Input() iconColorHover: string = "white";
     @Input() iconSize: 'extra-sm' | 'sm' | 'md' | 'lg' | 'extra-lg' = "md";
+    @Input() isLoading:  boolean = false;
+    @Input() isLoadingColor: string = "white";
 
     @Output() clicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 
     public get iconClass(): string {
         return "general-icon-" + this.iconSize + " " + this.icon;
+    }
+
+    public get loadingClass(): string {
+        return "loader loader-" + this.iconSize;
     }
 
     triggedButton(): void {

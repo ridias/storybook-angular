@@ -1,0 +1,20 @@
+<div class="pills-simple"
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-border': colorBorder
+    }">
+    <div class="pills-simple-header">
+        <div *ngFor="let option of pills" 
+            [ngClass]="option.disable ? 'pills-simple-btn disable' : option.active ? 'pills-simple-btn active' : 'pills-simple-btn'"
+            (click)="triggerBtn(option.id)">
+            <i [ngClass]="option.icon"></i>
+            {{ option.value }}
+        </div>
+    </div>
+    <div class="pills-simple-content">
+        <ng-content></ng-content>
+    </div>
+</div>

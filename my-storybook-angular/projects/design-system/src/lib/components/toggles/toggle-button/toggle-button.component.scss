@@ -1,0 +1,35 @@
+.toggle-button,
+.toggle-button-active {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.toggle-button {
+    background-color: var(--bgcolor);
+    border: 1px solid var(--color-border);
+    color: var(--color);
+}
+
+.toggle-button:hover {
+    background-color: var(--bgcolor-hover);
+    border-color: var(--bgcolor-hover);
+    color: var(--color-hover);
+}
+
+.toggle-button-active {
+    background-color: var(--bgcolor-active);
+    border: 1px solid var(--bgcolor-active);
+    color: var(--color-active);
+}
+
+.toggle-button-active:hover {
+    background-color: var(--bgcolor-active-hover);
+    border-color: var(--bgcolor-active-hover);
+    color: var(--color-active-hover);
+}
