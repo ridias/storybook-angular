@@ -1,0 +1,85 @@
+.tabs-simple-rounded {
+    width: 100%;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.tabs-simple-rounded-header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.tabs-simple-rounded-header-item,
+.tabs-simple-rounded-header-item-active,
+.tabs-simple-rounded-header-item-disable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+.tabs-simple-rounded-header-item-disable {
+    cursor: initial;
+}
+
+.tabs-simple-rounded-header-item-label {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color);
+    border: 1px solid transparent;
+}
+
+.tabs-simple-rounded-header-item:hover .tabs-simple-rounded-header-item-label {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.tabs-simple-rounded-header-item i {
+    color: var(--color);
+}
+
+.tabs-simple-rounded-header-item i,
+.tabs-simple-rounded-header-item-active i,
+.tabs-simple-rounded-header-item-disable i {
+    margin-right: 10px;
+}
+
+.tabs-simple-rounded-header-item:hover i {
+    color: var(--color-hover);
+}
+
+.tabs-simple-rounded-header-item-active {
+    height: 40px;
+    border: 1px solid var(--color-border) ;
+    border-top: 2px solid var(--bgcolor-hover);
+    border-bottom: 1px solid var(--bgcolor);
+    background-color: var(--bgcolor);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+}
+
+.tabs-simple-rounded-header-item-active i {
+    color: var(--color-active);
+}
+
+.tabs-simple-rounded-header-item-active .tabs-simple-rounded-header-item-label {
+    color: var(--color-active);
+}
+
+.tabs-simple-rounded-header-item-disable .tabs-simple-rounded-header-item-label, 
+.tabs-simple-rounded-header-item-disable i{
+    opacity: 0.5;
+}
+
+.tabs-simple-rounded-header-item-disable:hover .tabs-simple-rounded-header-item-label {
+    cursor: initial;
+    color: var(--color);
+}
+
+.tabs-simple-rounded-content {
+    border-top-width: 1px;
+    border-top-style: solid;
+}

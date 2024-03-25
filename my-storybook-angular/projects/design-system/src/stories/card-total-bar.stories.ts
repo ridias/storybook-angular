@@ -23,7 +23,8 @@ const meta: Meta<CardTotalBarComponent> = {
         isLoadingColor: {
             description: "Loading color",
             type: "string",
-            defaultValue: { summary: "black" }
+            defaultValue: { summary: "black" },
+            control: "color"
         },
         min: {
             description: "Minimum capacity of the bar",

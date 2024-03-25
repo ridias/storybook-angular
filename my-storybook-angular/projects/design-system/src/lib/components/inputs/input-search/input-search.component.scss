@@ -9,8 +9,8 @@
 
 .search-input-bar {
     flex: 80%;
-    width: 100%;
     height: 100%;
+    display: flex;
 }
 
 .search-input-bar input[type=text] {

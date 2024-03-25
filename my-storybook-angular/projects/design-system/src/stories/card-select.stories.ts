@@ -40,7 +40,8 @@ const meta: Meta<CardSelectComponent> = {
             defaultValue: { summary: 1 }
         },
         options: {
-            description: "Options of the select"
+            description: "Options of the select",
+            control: "array"
         },
         value: {
             description: "Value selected",

@@ -10,22 +10,22 @@ const meta: Meta<BadgeRoundedComponent> = {
         text: {
             description: 'Value of the badge',
             type: 'string',
-            defaultValue: ''
+            defaultValue: { summary: '' }        
         },
         size: {
             description: 'Font size in px',
             type: 'number',
-            defaultValue: '16'
+            defaultValue: { summary: '16' }
         },
         bgcolor: {
             description: 'Background color',
             type: 'string',
-            defaultValue: 'black'
+            defaultValue: { summary: 'black' }
         },
         color: {
             description: 'Color font',
             type: 'string',
-            defaultValue: 'white'
+            defaultValue: { summary: 'white' }
         }
     }
 };

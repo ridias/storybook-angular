@@ -1,0 +1,67 @@
+<div class="timepicker"
+    [ngStyle]="{
+        '--color': color,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color-border': colorBorder,
+        '--color-icon': colorIcon,
+        '--color-icon-hover': colorIconHover
+    }">
+    <div class="timepicker-input">
+        <input type="text" 
+            [(ngModel)]="timeStr" 
+            readonly>
+    </div>
+    <div class="timepicker-button">
+        <button (click)="triggerAction()">
+            <i class="general-icon-sm bi bi-clock-fill"></i>
+        </button>
+    </div>
+
+    <div [ngClass]="isOpen ? 'timepicker-window-opened' : 'timepicker-window'">
+        <div class="timepicker-window-content">
+            <div class="timepicker-window-col">
+                <div class="timepicker-header">
+                    <span>{{ hoursDescription }}</span>
+                </div>
+                <div class="timepicker-select">
+                    <select [(ngModel)]="hours" 
+                        (change)="onChangeHour()">
+                        <option *ngFor="let hour of hoursOptions" 
+                            [value]="+hour">
+                            {{ hour }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="timepicker-window-col">
+                <div class="timepicker-header">
+                    <span>{{ minutesDescription }}</span>
+                </div>
+                <div class="timepicker-select">
+                    <select [(ngModel)]="minutes" 
+                        (change)="onChangeMinutes()">
+                        <option *ngFor="let minute of minutesOptions" 
+                            [value]="+minute">
+                            {{ minute }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="timepicker-window-col">
+                <div class="timepicker-header">
+                    <span>{{ secondsDescription }}</span>
+                </div>
+                <div class="timepicker-select">
+                    <select [(ngModel)]="seconds" 
+                        (change)="onChangeSeconds()">
+                        <option *ngFor="let second of secondsOptions" 
+                            [value]="+second">
+                            {{ second }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,22 +10,22 @@ const meta: Meta<BadgeComponent> = {
         text: {
             description: 'Value of the badge',
             type: 'string',
-            defaultValue: ''
+            defaultValue: { summary: '' }
         },
         size: {
             description: 'Font size in px',
             type: 'number',
-            defaultValue: '16'
+            defaultValue: { summary: '16' }
         },
         bgcolor: {
             description: 'Background color',
             type: 'string',
-            defaultValue: 'black'
+            defaultValue: { summary: 'black' }
         },
         color: {
             description: 'Color font',
             type: 'string',
-            defaultValue: 'white'
+            defaultValue: { summary: 'white' }
         }
     }
 };
@@ -33,7 +33,7 @@ const meta: Meta<BadgeComponent> = {
 export default meta;
 type Story = StoryObj<BadgeComponent>;
 
-export const BadgePrimary: Story = {
+export const BadgeDefault: Story = {
   args: {
     text: 'Pending',
   },

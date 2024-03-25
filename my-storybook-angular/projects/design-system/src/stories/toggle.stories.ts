@@ -9,32 +9,32 @@ const meta: Meta<ToggleComponent> = {
         colorChecked: {
             description: "Color when checked toggle",
             type: "string",
-            defaultValue: "orange"
+            defaultValue: { summary: "orange" }
         },
         colorDisable: {
             description: "Color when disable toggle",
             type: "string",
-            defaultValue: "#EEE"
+            defaultValue: { summary: "#EEE" }
         },
         colorUnchecked: {
             description: "Color when unchecked toggle",
             type: "string",
-            defaultValue: "#EEE"
+            defaultValue: { summary: "#EEE" }
         },
         bgcolor: {
             description: "Background Color toggle",
             type: "string",
-            defaultValue: "grey"
+            defaultValue: { summary: "grey" }
         },
         active: {
             description: "Active toggle",
             type: "boolean",
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         disabled: {
             description: "Disabled or not toggle",
             type: "boolean",
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         changeToggle: {
             action: 'changeToggle'

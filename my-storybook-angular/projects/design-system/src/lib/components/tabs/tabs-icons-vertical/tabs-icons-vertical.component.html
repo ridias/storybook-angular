@@ -1,0 +1,21 @@
+<div class="tabs-icons-vertical"
+    [ngStyle]="{
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-active': colorActive,
+        '--color-border': colorBorder,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover
+    }">
+    <div class="tabs-icons-vertical-side">
+        <div [class]="tab.disable ? 'tabs-icons-vertical-side-item-disable' : tab.active ? 'tabs-icons-vertical-side-item-active' : 'tabs-icons-vertical-side-item'" 
+            *ngFor="let tab of tabs"
+            (click)="selectTab(tab)">
+            <i [class]="'general-icon-md ' + tab.icon"></i>
+        </div>
+    </div>
+    <div class="tabs-icons-vertical-content"
+        [style.border-left-color]="colorBorder">
+        <ng-content></ng-content>
+    </div>
+</div>

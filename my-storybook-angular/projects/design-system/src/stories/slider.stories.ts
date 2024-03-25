@@ -17,45 +17,45 @@ const meta: Meta<SliderComponent> = {
         value: {
             description: "Current value of the slider",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         minValue: {
             description: "Min value of the slider",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         maxValue: {
             description: "Max value of the slider",
             type: "number",
-            defaultValue: 0
+            defaultValue: { summary: 0 }
         },
         bgcolor: {
             description: "Background color slider",
             type: "string",
-            defaultValue: "#ccc"
+            defaultValue: { summary: "#ccc" }
         },
         colorSliderThumb: {
             description: "Color slider thumb of the slider",
             type: "string",
-            defaultValue: "orange",
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         colorRangeThumb: {
             description: "Color range thumb of the slider ",
             type: "string",
-            defaultValue: "orange",
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         colorThumbHover: {
             description: "Shadow color thumb hover of the slider",
             type: "string",
-            defaultValue: "rgba(255,85,0, .1)",
+            defaultValue: { summary: "rgba(255,85,0, .1)" },
             control: "color"
         },
         colorThumbActiveFocus: {
             description: "Shadow color when active or focus thumb of the slider",
             type: "string",
-            defaultValue: "rgba(255,85,0, .2)",
+            defaultValue: { summary: "rgba(255,85,0, .2)" },
             control: "color"
         },
         valueChanged: {

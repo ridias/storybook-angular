@@ -17,59 +17,59 @@ const meta: Meta<CheckboxSelectorComponent> = {
         active: {
             description: "Checkbox activated or not",
             type: "boolean",
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         description: {
             description: "Description of the checkbox",
             type: "string",
-            defaultValue: "Item"
+            defaultValue: { summary: "Item" }
         },
         bgColor: {
             description: "Background color of the checkbox when it is inactive",
             type: "string",
-            defaultValue: "transparent",
+            defaultValue: { summary: "transparent" },
             control: "color"
         },
         bgColorActive: {
             description: "Background color of the checkbox when it is active",
             type: "string",
-            defaultValue: "orange",
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         borderColor: {
             description: "Border color when it is inactive",
             type: "string",
-            defaultValue: "#ddd",
+            defaultValue: { summary: "#ddd" },
             control: "color"
         },
         borderColorActive: {
             description: "Border color when it is active",
             type: "string",
-            defaultValue: "orange",
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         colorActive: {
             description: "Font color when it is active",
             type: "string",
-            defaultValue: "white",
+            defaultValue: { summary: "white" },
             control: "color"
         },
         color: {
             description: "Font color when it is inactive ",
             type: "string",
-            defaultValue: "black",
+            defaultValue: { summary: "black" },
             control: "color"
         },
         colorIcon: {
             description: "Icon color when it is inactive",
             type: "string",
-            defaultValue: "grey",
+            defaultValue: { summary: "grey" },
             control: "color"
         },
         colorIconActive: {
             description: "Icon color when it is active",
             type: "string",
-            defaultValue: "white",
+            defaultValue: { summary: "white" },
             control: "color"
         },
         activeChanged: {

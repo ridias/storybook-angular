@@ -1,4 +1,4 @@
-import { Meta, StoryObj, moduleMetadata } from "@storybook/angular";
+import { Meta, StoryObj } from "@storybook/angular";
 import { TextComponent } from "../lib/components/texts/text/text.component";
 
 const meta: Meta<TextComponent> = {
@@ -9,17 +9,17 @@ const meta: Meta<TextComponent> = {
         value: {
             description: "Value of the text",
             type: "string",
-            defaultValue: "Text"
+            defaultValue: { summary: "Text" }
         },
         size: {
             description: "Font size of the text",
             type: "string",
-            defaultValue: "28px"
+            defaultValue: { summary: "28px" }
         },
         color: {
             description: "Color of the text",
             type: "string",
-            defaultValue: "black",
+            defaultValue: { summary: "black" },
             control: "color"
         }
     }

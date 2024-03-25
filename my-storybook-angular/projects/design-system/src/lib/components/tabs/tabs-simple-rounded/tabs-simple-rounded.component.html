@@ -1,0 +1,24 @@
+<div class="tabs-simple-rounded"
+    [ngStyle]="{
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-active': colorActive,
+        '--color-border': colorBorder,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover
+    }">
+    <div class="tabs-simple-rounded-header">
+        <div [class]="tab.disable ? 'tabs-simple-rounded-header-item-disable' : tab.active ? 'tabs-simple-rounded-header-item-active' : 'tabs-simple-rounded-header-item'" 
+            *ngFor="let tab of tabs"
+            (click)="selectTab(tab)">
+            <i [class]="'general-icon-sm ' + tab.icon" 
+                *ngIf="tab.icon.length > 0"></i>
+            <label class="tabs-simple-rounded-header-item-label" 
+                [for]="tab.id">{{ tab.value }}</label>
+        </div>
+    </div>
+    <div class="tabs-simple-rounded-content"
+        [style.border-top-color]="colorBorder">
+        <ng-content></ng-content>
+    </div>
+</div>

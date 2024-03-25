@@ -9,49 +9,49 @@ const meta: Meta<ProgressBarComparisonComponent> = {
         descriptionLeft: {
             description: "Description of the left bar",
             type: "string",
-            defaultValue: ""
+            defaultValue: { summary: "" }
         },
         descriptionRight: {
             description: "Description of the right bar",
             type: "string",
-            defaultValue: ""
+            defaultValue: { summary: "" }
         },
         percentageLeft: {
             description: "Percentage filled for left bar",
-            type: "string",
-            defaultValue: "0"
+            type: "string", 
+            defaultValue: { summary: "0" }
         },
         percentageRight: {
             description: "Percentage filled for right bar",
             type: "string",
-            defaultValue: "0"
+            defaultValue: { summary: "0" }
         },
         valueLeft: {
             description: "Value of the left bar filled",
             type: "string",
-            defaultValue: "0"
+            defaultValue: { summary: "0" }
         },
         valueRight: {
             description: "Value of the right bar filled",
             type: "string",
-            defaultValue: "0"
+            defaultValue: { summary: "0" }
         },
         colorFillLeft: {
             description: "Color of the left filled bar",
             type: "string",
-            defaultValue: "#0298B3",
+            defaultValue: { summary: "#0298B3" },
             control: "color"
         },
         colorFillRight: {
             description: "Color of the right filled bar",
             type: "string",
-            defaultValue: "#CDC9C6",
+            defaultValue: { summary: "#CDC9C6" },
             control: "color"
         },
         color: {
             description: "Font color",
             type: "string",
-            defaultValue: "black",
+            defaultValue: { summary: "black" },
             control: "color"
         }
     }

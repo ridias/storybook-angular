@@ -1,0 +1,25 @@
+<div class="input-simple-group field"
+    [ngStyle]="{
+        '--color-border': colorBorder,
+        '--color-font': colorValue
+    }">
+    <input [type]="type" 
+        class="input-simple-field" 
+        [placeholder]="placeholder" 
+        [required]="required"
+        [pattern]="pattern"
+        [(ngModel)]="value"
+        (keyup)="setValue()"
+        [style.background-color]="bgColor" />
+    
+    <div class="input-simple-errors">
+        <small style="color: red;" 
+            *ngIf="value.length == 0 && required">
+            {{ errorRequired }}
+        </small>
+        <small style="color: red;"
+            *ngIf="!isValueValid()">
+            {{ errorValue }}
+        </small>
+    </div>
+  </div>

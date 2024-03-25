@@ -10,37 +10,37 @@ const meta: Meta<AccordionComponent> = {
         text: {
             description: 'Value of the header',
             type: 'string',
-            defaultValue: 'Accordion 1'
+            defaultValue: { summary: 'Accordion 1'}
         },
         disable: {
             description: 'Disable accordion',
             type: 'boolean',
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         borderWidth: {
             description: 'Border width in px',
             type: 'number',
-            defaultValue: 1
+            defaultValue: { summary: 1 }
         },
         borderStyle: {
             description: 'Border style',
             type: 'string',
-            defaultValue: 'solid'
+            defaultValue: { summary: 'solid' }
         },
         borderColor: {
             description: 'Border color',
             type: 'string',
-            defaultValue: '#CCC'
+            defaultValue: { summary: '#CCC' }
         },
         iconColor: {
             description: 'Icon color',
             type: 'string',
-            defaultValue: '#CCC'
+            defaultValue: { summary: '#CCC' }
         },
         isOpen: {
             description: 'Open or not accordion',
             type: 'boolean',
-            defaultValue: false
+            defaultValue: { summary: false }
         },
         accordionOpened: {
             action: 'accordionOpened'

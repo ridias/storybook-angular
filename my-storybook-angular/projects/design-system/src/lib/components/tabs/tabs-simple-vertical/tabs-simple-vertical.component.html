@@ -1,0 +1,23 @@
+<div class="tabs-simple-vertical"
+    [ngStyle]="{
+        '--color': color,
+        '--color-hover': colorHover,
+        '--color-active': colorActive,
+        '--color-border': colorBorder,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover
+    }">
+    <div class="tabs-simple-vertical-side">
+        <div [class]="tab.disable ? 'tabs-simple-vertical-side-item-disable' : tab.active ? 'tabs-simple-vertical-side-item-active' : 'tabs-simple-vertical-side-item'" 
+            *ngFor="let tab of tabs"
+            (click)="selectTab(tab)">
+            <i [class]="'general-icon-md ' + tab.icon"></i>
+            <label class="tabs-simple-vertical-side-item-label" 
+                [for]="tab.id">{{ tab.value }}</label>
+        </div>
+    </div>
+    <div class="tabs-simple-vertical-content"
+        [style.border-left-color]="colorBorder">
+        <ng-content></ng-content>
+    </div>
+</div>

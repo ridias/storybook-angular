@@ -35,6 +35,16 @@ import { SelectSearchComponent } from "./components/inputs/select-search/select-
 import { SemicircleKpi2cComponent } from "./components/semicircles/semicircle-kpi-2c/semicircle-kpi-2c.component";
 import { ToggleButtonComponent } from "./components/toggles/toggle-button/toggle-button.component";
 import { ModalDetailsComponent } from "./components/modals/modal-details/modal-details.component";
+import { InputSimpleComponent } from "./components/inputs/input-simple/input-simple.component";
+import { TabsSimpleComponent } from "./components/tabs/tabs-simple/tabs-simple.component";
+import { TabsSimpleRoundedComponent } from "./components/tabs/tabs-simple-rounded/tabs-simple-rounded.component";
+import { TabsIconsComponent } from "./components/tabs/tabs-icons/tabs-icons.component";
+import { TabsIconsRoundedComponent } from "./components/tabs/tabs-icons-rounded/tabs-icons-rounded.component";
+import { TabsIconsVerticalComponent } from "./components/tabs/tabs-icons-vertical/tabs-icons-vertical.component";
+import { TabsIconsRoundedVerticalComponent } from "./components/tabs/tabs-icons-rounded-vertical/tabs-icons-rounded-vertical.component";
+import { TabsSimpleVerticalComponent } from "./components/tabs/tabs-simple-vertical/tabs-simple-vertical.component";
+import { TabsSimpleRoundedVerticalComponent } from "./components/tabs/tabs-simple-rounded-vertical/tabs-simple-rounded-vertical.component";
+import { TimepickerComponent } from "./components/timerpickers/timerpicker/timepicker.component";
 
 @NgModule({  
     declarations: [
@@ -52,6 +62,7 @@ import { ModalDetailsComponent } from "./components/modals/modal-details/modal-d
         InputComplexComponent,
         InputMultipleItemsComponent,
         InputSearchComponent,
+        InputSimpleComponent,
         ModalDetailsComponent,
         NavBreadcrumbComponent,
         PaginationComponent,
@@ -69,7 +80,16 @@ import { ModalDetailsComponent } from "./components/modals/modal-details/modal-d
         SelectSearchComponent,
         SemicircleKpi2cComponent,
         SliderComponent,
+        TabsIconsComponent,
+        TabsIconsRoundedComponent,
+        TabsIconsRoundedVerticalComponent,
+        TabsIconsVerticalComponent,
+        TabsSimpleComponent,
+        TabsSimpleRoundedComponent,
+        TabsSimpleRoundedVerticalComponent,
+        TabsSimpleVerticalComponent,
         TextComponent,
+        TimepickerComponent,
         ToggleComponent,
         ToggleButtonComponent
     ],  
@@ -89,6 +109,7 @@ import { ModalDetailsComponent } from "./components/modals/modal-details/modal-d
         InputComplexComponent,
         InputMultipleItemsComponent,
         InputSearchComponent,
+        InputSimpleComponent,
         ModalDetailsComponent,
         NavBreadcrumbComponent,
         PaginationComponent,
@@ -106,7 +127,16 @@ import { ModalDetailsComponent } from "./components/modals/modal-details/modal-d
         SelectSearchComponent,
         SemicircleKpi2cComponent,
         SliderComponent,
+        TabsIconsComponent,
+        TabsIconsRoundedComponent,
+        TabsIconsRoundedVerticalComponent,
+        TabsIconsVerticalComponent,
+        TabsSimpleComponent,
+        TabsSimpleRoundedComponent,
+        TabsSimpleRoundedVerticalComponent,
+        TabsSimpleVerticalComponent,
         TextComponent,
+        TimepickerComponent,
         ToggleComponent,
         ToggleButtonComponent
     ],

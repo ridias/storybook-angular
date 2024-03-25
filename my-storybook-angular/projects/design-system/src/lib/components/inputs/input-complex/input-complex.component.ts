@@ -12,7 +12,7 @@ export class InputComplexComponent implements OnInit {
     @Input() colorValue: string = "black";
     @Input() labelValue: string = "Field";
     @Input() colorBorderBottom: string = "#ddd";
-    @Input() type: string = "text";
+    @Input() type: "text" | "password" | "number" | "email" | "search" | "tel" = "text";
     @Input() placeholder: string = "";
     @Input() required: boolean = true;
     @Input() pattern: string = "";
