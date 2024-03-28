@@ -17,7 +17,7 @@ export class CardTotalBarComponent implements OnInit, OnChanges {
     @Input() colorTitle: string = "black";
     @Input() colorSubtitle: string = "grey";
     @Input() colorFilled: string = "purple";
-    @Input() colorMiniLine: string = "purple";
+    @Input() bgColorWindow: string = "purple";
     @Input() isLoading: boolean = false;
     @Input() isLoadingColor: string = "black";
     @Input() bgColor: string = "white";

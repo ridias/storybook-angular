@@ -16,6 +16,8 @@ export class InputSearchComponent implements OnInit {
     @Input() color: string = "black";
     @Input() colorIconHover: string = "#ddd";
     @Input() bgColorHover: string = "#aaa";
+    @Input() colorPlaceholder: string = "grey";
+    @Input() placeholder: string = "Search..."
 
     @Output() searchCompleted: EventEmitter<string> = new EventEmitter<string>();
 

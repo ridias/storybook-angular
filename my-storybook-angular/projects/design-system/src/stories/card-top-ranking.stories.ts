@@ -33,7 +33,8 @@ const meta: Meta<CardTopRankingComponent> = {
         isLoadingColor: {
             description: "Loading color",
             type: "string",
-            defaultValue: { summary: "black" }
+            defaultValue: { summary: "black" },
+            control: "color"
         },
         titleValue: {
             description: "Title",
@@ -53,7 +54,26 @@ const meta: Meta<CardTopRankingComponent> = {
         colorIcon: {
             description: "Color of the icon",
             type: "string",
-            defaultValue: { summary: "black" }
+            defaultValue: { summary: "black" },
+            control: "color"
+        },
+        bgColor: {
+            description: "Background color",
+            type: "string",
+            defaultValue: { summary: "white" },
+            control: "color"
+        },
+        colorTitle: {
+            description: "Font color title",
+            type: "string",
+            defaultValue: { summary: "black" },
+            control: "color"
+        },
+        colorSubtitle: {
+            description: "Font color subtitle",
+            type: "string",
+            defaultValue: { summary: "black" },
+            control: "color"
         }
     }
 }

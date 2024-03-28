@@ -1,7 +1,7 @@
 <div [ngClass]="!isOpen ? 'accordion-component' : 'accordion-component is-open'"
-    [style.border-width.px]="borderWidth"
     [style.border-color]="borderColor"
-    [style.border-style]="borderStyle">
+    [style.background-color]="bgColor"
+    [style.color]="color">
     <div>
         <div class="accordion-header" 
             (click)="triggerAction()"

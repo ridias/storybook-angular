@@ -15,6 +15,10 @@
     transition: border-color 0.2s;
     border-radius: 5px;
 }
+
+.input-simple-field::placeholder {
+    color: var(--color-placeholder);
+}
   
 .input-simple-field:focus {
     outline: 2px solid var(--color-border);

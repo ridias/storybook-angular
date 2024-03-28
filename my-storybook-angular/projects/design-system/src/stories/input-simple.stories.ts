@@ -64,7 +64,14 @@ const meta: Meta<InputSimpleComponent> = {
         bgColor: {
             description: "Background color of the input",
             type: "string",
-            defaultValue: { summary: "#fdfdfd" }
+            defaultValue: { summary: "#fdfdfd" },
+            control: "color"
+        },
+        colorPlaceholder: {
+            description: "Color placeholder",
+            type: "string",
+            defaultValue: { summary: "#fdfdfd" },
+            control: "color"
         },
         valueChanged: {
             action: "valueChanged"

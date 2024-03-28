@@ -56,13 +56,25 @@ const meta: Meta<CardTotalBarComponent> = {
             type: "string",
             defaultValue: { summary: "Subtitle" }
         },
+        colorTitle: {
+            description: "Color of the title",
+            type: "string",
+            defaultValue: { summary: "black" },
+            control: "color"
+        },
+        colorSubtitle: {
+            description: "Color of the subtitle",
+            type: "string",
+            defaultValue: { summary: "grey" },
+            control: "color"
+        },
         colorFilled: {
             description: "Color of the filled bar",
             type: "string",
             defaultValue: { summary: "purple" },
             control: "color"
         },
-        colorMiniLine: {
+        bgColorWindow: {
             description: "Color miniline",
             type: "string",
             defaultValue: { summary: "purple" },
@@ -109,6 +121,6 @@ export const CardTopRankingHalfFilled: Story = {
     args: {
         currentValue: "500",
         compareValue: 250,
-        colorMiniLine: "#43185D"
+        bgColorWindow: "#43185D"
     }
 }

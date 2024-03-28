@@ -17,25 +17,29 @@ const meta: Meta<AccordionComponent> = {
             type: 'boolean',
             defaultValue: { summary: false }
         },
-        borderWidth: {
-            description: 'Border width in px',
-            type: 'number',
-            defaultValue: { summary: 1 }
-        },
-        borderStyle: {
-            description: 'Border style',
-            type: 'string',
-            defaultValue: { summary: 'solid' }
-        },
         borderColor: {
             description: 'Border color',
             type: 'string',
-            defaultValue: { summary: '#CCC' }
+            defaultValue: { summary: '#CCC' },
+            control: "color"
+        },
+        bgColor: {
+            description: 'Background color',
+            type: 'string',
+            defaultValue: { summary: 'white' },
+            control: "color"
+        },
+        color: {
+            description: 'Font color',
+            type: 'string',
+            defaultValue: { summary: 'black' },
+            control: "color"
         },
         iconColor: {
             description: 'Icon color',
             type: 'string',
-            defaultValue: { summary: '#CCC' }
+            defaultValue: { summary: '#CCC' },
+            control: "color"
         },
         isOpen: {
             description: 'Open or not accordion',

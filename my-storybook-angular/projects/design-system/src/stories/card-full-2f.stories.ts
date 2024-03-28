@@ -28,17 +28,20 @@ const meta: Meta<CardFull2fComponent> = {
         bgColor: {
             description: "Background color of the card",
             type: "string",
-            defaultValue: { summary: "#37C9F0" }
+            defaultValue: { summary: "#37C9F0" },
+            control: "color"
         },
         colorValue: {
             description: "Color of the value text",
             type: "string",
-            defaultValue: { summary: "#FFF" }
+            defaultValue: { summary: "#FFF" },
+            control: "color"
         },
         colorDescription: {
             description: "Color of the description text",
             type: "string",
-            defaultValue: { summary: "#FFF" }
+            defaultValue: { summary: "#FFF" },
+            control: "color"
         },
         isLoading: {
             description: "If the card is loading or not",

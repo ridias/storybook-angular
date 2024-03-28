@@ -25,6 +25,10 @@
     border-right: none;
 }
 
+.search-input-bar input[type=text]::placeholder {
+    color: var(--color-placeholder);
+}
+
 .search-input-btn {
     width: 75px;
     height: 100%;

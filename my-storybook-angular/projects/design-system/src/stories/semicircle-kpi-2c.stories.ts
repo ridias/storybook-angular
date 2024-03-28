@@ -57,17 +57,20 @@ const meta: Meta<SemicircleKpi2cComponent> = {
         colorLeft: {
             description: "Color left part of the semicircle",
             type: "string",
-            defaultValue: { summary: "#4FBF9D" }
+            defaultValue: { summary: "#4FBF9D" },
+            control: "color"
         },
         colorRight: {
             description: "Color right part of the semicircle",
             type: "string",
-            defaultValue: { summary: "#EB895F" }
+            defaultValue: { summary: "#EB895F" },
+            control: "color"
         },
         colorArrow: {
             description: "Color arrow of the semicircle",
             type: "string",
-            defaultValue: { summary: "grey" }
+            defaultValue: { summary: "grey" },
+            control: "color"
         }
     }
 }

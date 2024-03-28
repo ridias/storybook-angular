@@ -16,6 +16,9 @@ export class CardTopRankingComponent implements OnInit {
     @Input() subtitleValue: string = "Subtitle";
     @Input() emptyValue: string = "Empty!";
     @Input() colorIcon: string = "black";
+    @Input() bgColor: string = "white";
+    @Input() colorTitle: string = "black";
+    @Input() colorSubtitle: string = "black";
     
     ngOnInit(): void {
         

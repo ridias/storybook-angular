@@ -1,11 +1,12 @@
-<div class="card-top-rank">
+<div class="card-top-rank"
+    [style.background-color]="bgColor">
     <div class="card-top-rank-left">
         <div *ngIf="values.length == 0 && !isLoading" class="card-top-empty">
             {{ emptyValue }}
         </div>
 
         <div *ngIf="isLoading">
-            <span class="loader" 
+            <span class="loader loader-md" 
                 [style.border-color]="isLoadingColor"
                 [style.border-bottom-color]="'transparent'">
             </span>
@@ -20,10 +21,12 @@
 
     <div class="card-top-rank-right">
         <div class="card-top-rank-right-titles">
-            <div class="card-top-rank-right-title">
+            <div class="card-top-rank-right-title"
+                [style.color]="colorTitle">
                 {{ titleValue }}
             </div>
-            <div class="card-top-rank-right-subtitle">
+            <div class="card-top-rank-right-subtitle"
+                [style.color]="colorSubtitle">
                 {{ subtitleValue }}
             </div>
         </div>

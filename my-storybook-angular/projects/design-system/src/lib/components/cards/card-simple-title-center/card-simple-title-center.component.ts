@@ -14,7 +14,8 @@ export class CardSimpleTitleCenterComponent implements OnInit {
     @Input() icon: string = "";
     @Input() iconColor: string = "";
     @Input() headerBorderBottomWidthPx: number = 0;
-    @Input() bgColor: string = "var(--color-onbg-secondary)";
+    @Input() color: string = "black";
+    @Input() bgColor: string = "white";
     @Input() borderColor: string = "none";
     @Input() borderWidth: number = 0;
     @Input() borderStyle: string = "none";

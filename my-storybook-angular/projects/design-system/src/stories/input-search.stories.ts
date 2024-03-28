@@ -19,6 +19,11 @@ const meta: Meta<InputSearchComponent> = {
             type: "number",
             defaultValue: { summary: 100 }
         },
+        placeholder: {
+            description: "Placeholder description",
+            type: "string",
+            defaultValue: { summary: "Search..." }
+        },
         isLoading: {
             description: "If the input is loading or not",
             type: "boolean",
@@ -27,32 +32,44 @@ const meta: Meta<InputSearchComponent> = {
         bgColor: {
             description: "Background color of the input",
             type: "string",
-            defaultValue: { summary: "#fdfdfd" }
+            defaultValue: { summary: "#fdfdfd" },
+            control: "color"
         },
         colorBorder: {
             description: "Color border of the input",
             type: "string",
-            defaultValue: { summary: "#ddd" }
+            defaultValue: { summary: "#ddd" },
+            control: "color"
         },
         colorIcon: {
             description: "Color icon",
             type: "string",
-            defaultValue: { summary: "black" }
+            defaultValue: { summary: "black" },
+            control: "color"
         },
         color: {
             description: "Font color",
             type: "string",
-            defaultValue: { summary: "black" }
+            defaultValue: { summary: "black" },
+            control: "color"
         },
         colorIconHover: {
             description: "Color Icon hover",
             type: "string",
-            defaultValue: { summary: "#ddd" }
+            defaultValue: { summary: "#ddd" },
+            control: "color"
         },
         bgColorHover: {
             description: "Background color hover of the button",
             type: "string",
-            defaultValue: { summary: "#aaa" }
+            defaultValue: { summary: "#aaa" },
+            control: "color"
+        },
+        colorPlaceholder: {
+            description: "Color placeholder",
+            type: "string",
+            defaultValue: { summary: "grey" },
+            control: "color"
         },
         searchCompleted: {
             action: "searchCompleted"

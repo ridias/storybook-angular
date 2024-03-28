@@ -8,8 +8,8 @@ import { Component, Input, OnInit } from "@angular/core";
 
 export class CardSimpleTitleSubtitleCenterComponent implements OnInit {
     
-    @Input() titleCard: string = "";
-    @Input() subtitleCard: string = "";
+    @Input() titleCard: string = "Title card";
+    @Input() subtitleCard: string = "Subtitle card";
     @Input() fontSizeTitle: number = 24;
     @Input() fontSizeSubtitle: number = 16;
     @Input() fontSizeIcon: number = 28;
@@ -18,10 +18,11 @@ export class CardSimpleTitleSubtitleCenterComponent implements OnInit {
     @Input() iconTop: string = "10%";
     @Input() iconLeft: string = "5%";
     @Input() headerBorderBottomWidthPx: number = 0;
-    @Input() bgColor: string = "var(--color-onbg-secondary)"
+    @Input() bgColor: string = "white"
     @Input() borderColor: string = "none";
     @Input() borderWidth: number = 0;
     @Input() borderStyle: string = "none";
+    @Input() color: string = "black";
 
     constructor(){
 

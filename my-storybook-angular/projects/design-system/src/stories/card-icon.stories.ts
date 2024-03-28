@@ -66,8 +66,7 @@ const meta: Meta<CardIconSideComponent> = {
         marginTopIcon: {
             description: "Margin top icon in px",
             type: "number",
-            defaultValue: { summary: "#ddd" },
-            control: "color"
+            defaultValue: { summary: 0 },
         },
         color: {
             description: "Font color",

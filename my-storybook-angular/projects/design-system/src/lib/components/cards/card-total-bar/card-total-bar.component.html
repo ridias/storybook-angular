@@ -1,8 +1,9 @@
-<div class="card-total-bar">
+<div class="card-total-bar"
+    [style.background-color]="bgColor">
     <div class="card-total-bar-top">
         <div class="card-total-bar-top-value">
             <div *ngIf="isLoading">
-                <span class="loader" 
+                <span class="loader loader-md" 
                     [style.border-color]="isLoadingColor"
                     [style.border-bottom-color]="'transparent'">
                 </span>
@@ -32,10 +33,10 @@
         </div>
         <div class="card-total-bar-mini-line" 
             [style.left]="positionMiniLineInPercentage + '%'"
-            [style.background]="colorMiniLine">
+            [style.background]="bgColorWindow">
             <div class="card-total-bar-window" *ngIf="isToolTip">
                 <div class="card-total-bar-window-card"
-                    [style.background]="colorMiniLine"
+                    [style.background]="bgColorWindow"
                     [style.color]="colorWindow">
                     {{ compareValue }}
                 </div>

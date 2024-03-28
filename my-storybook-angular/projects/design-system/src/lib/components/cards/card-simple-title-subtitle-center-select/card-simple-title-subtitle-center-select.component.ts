@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import { FilterOption } from "../../selects/filter-last-days/models/FilterOption";
+import { FilterOption } from "../../../models/FilterOption";
 
 @Component({
     selector: 'app-card-simple-title-subtitle-center-select',

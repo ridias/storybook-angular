@@ -27,27 +27,32 @@ const meta: Meta<ButtonIconComponent> = {
         bgColor: {
             description: 'Background color of the button',
             type: 'string',
-            defaultValue: { summary: 'orange' }
+            defaultValue: { summary: 'orange' },
+            control: "color"
         },
         bgColorHover: {
             description: 'Background color hover of the button',
             type: 'string',
-            defaultValue: { summary: 'orangered' }
+            defaultValue: { summary: 'orangered' },
+            control: "color"
         },
         colorBorder: {
             description: 'Border color',
             type: 'string',
-            defaultValue: { summary: 'orange' }
+            defaultValue: { summary: 'orange' },
+            control: "color"
         },
         iconColor: {
             description: 'Color of the icon',
             type: 'string',
-            defaultValue: { summary: 'white' }
+            defaultValue: { summary: 'white' },
+            control: "color"
         },
         iconColorHover: {
             description: 'Color hover of the icon',
             type: 'string',
-            defaultValue: { summary: 'white' }
+            defaultValue: { summary: 'white' },
+            control: "color"
         },
         iconSize: {
             description: 'Size of the icon',
@@ -62,7 +67,8 @@ const meta: Meta<ButtonIconComponent> = {
         isLoadingColor: {
             description: 'Color of the loading',
             type: 'string',
-            defaultValue: { summary: 'white' }
+            defaultValue: { summary: 'white' },
+            control: "color"
         },
         clicked: {
             action: "clicked"

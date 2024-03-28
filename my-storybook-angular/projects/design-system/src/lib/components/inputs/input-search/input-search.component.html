@@ -3,7 +3,8 @@
         '--color-icon': colorIcon,
         '--color-icon-hover': colorIconHover,
         '--bgcolor-hover': bgColorHover,
-        '--bgcolor': bgColor
+        '--bgcolor': bgColor,
+        '--color-placeholder': colorPlaceholder
     }">
     <div class="search-input-bar">
         <input type="text"
@@ -12,7 +13,7 @@
             [style.border-color]="colorBorder"
             name="searchValue" 
             class="search-input-form" 
-            placeholder="Buscar..."
+            [placeholder]="placeholder"
             [(ngModel)]="searchValue"
             (keypress)="checkIfEnterPressed($event)"
             autocomplete="off"/>

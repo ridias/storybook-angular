@@ -4,8 +4,9 @@
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    color: var(--color-font-primary);
     position: relative;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .card-simple-title-center-header {

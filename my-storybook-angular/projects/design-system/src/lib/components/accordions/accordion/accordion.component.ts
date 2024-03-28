@@ -10,11 +10,11 @@ export class AccordionComponent implements OnInit {
     
     @Input() text: string = "Accordion 1"
     @Input() disable: boolean = false;
-    @Input() borderWidth: number = 1;
-    @Input() borderStyle: string = "solid"
     @Input() borderColor: string = "#CCC";
+    @Input() bgColor: string = "white";
     @Input() iconColor: string = "#CCC";
     @Input() isOpen: boolean = false;
+    @Input() color: string = "black";
 
     @Output() accordionOpened: EventEmitter<boolean> = new EventEmitter<boolean>();
 
@@ -37,7 +37,7 @@ export class AccordionComponent implements OnInit {
     }
     
     open(): void {
-        this.borderBottom = this.borderWidth + "px " + this.borderStyle + " " + this.borderColor;
+        this.borderBottom = "1px solid " + this.borderColor;
         this.transformIcon = "rotate(180deg)";
         this.accordionOpened.emit(this.isOpen);
     }

@@ -12,6 +12,7 @@ export class InputSimpleComponent implements OnInit {
     @Input() colorBorder: string = "#ddd";
     @Input() type: "text" | "password" | "number" | "email" | "search" | "tel" = "text";
     @Input() placeholder: string = "";
+    @Input() colorPlaceholder: string = "grey";
     @Input() required: boolean = true;
     @Input() pattern: string = "";
     @Input() errorValue: string = "Error!";

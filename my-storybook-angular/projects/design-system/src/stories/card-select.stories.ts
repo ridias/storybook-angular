@@ -54,6 +54,12 @@ const meta: Meta<CardSelectComponent> = {
             defaultValue: { summary: "white"},
             control: "color"
         },
+        bgColorHover: {
+            description: "Background color hover of the card",
+            type: "string",
+            defaultValue: { summary: "#eee"},
+            control: "color"
+        },
         colorBorder: {
             description: "Color border",
             type: "string",
