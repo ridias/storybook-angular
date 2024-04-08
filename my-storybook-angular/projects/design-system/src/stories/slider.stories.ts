@@ -58,6 +58,12 @@ const meta: Meta<SliderComponent> = {
             defaultValue: { summary: "rgba(255,85,0, .2)" },
             control: "color"
         },
+        color: {
+            description: "Font color",
+            type: "string",
+            defaultValue: { summary: "black" },
+            control: "color"
+        },
         valueChanged: {
             action: 'valueChanged'
         }

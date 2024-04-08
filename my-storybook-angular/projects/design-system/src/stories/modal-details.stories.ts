@@ -2,7 +2,7 @@ import { Meta, StoryObj, argsToTemplate, moduleMetadata } from "@storybook/angul
 import { action } from '@storybook/addon-actions';
 import { FormsModule } from "@angular/forms";
 import { ModalDetailsComponent } from "../lib/components/modals/modal-details/modal-details.component";
-import { ButtonComponent } from "../lib/components/buttons/button/button.component";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 const meta: Meta<ModalDetailsComponent> = {
     title: 'Example/Modals/ModalDetails',
@@ -12,17 +12,92 @@ const meta: Meta<ModalDetailsComponent> = {
     decorators: [
         moduleMetadata({
             imports: [
-                FormsModule
+                FormsModule,
+                NgbModule
             ],
             declarations: [
-                ModalDetailsComponent, ButtonComponent 
+                ModalDetailsComponent 
             ]
         })
     ],
     argTypes: {
+        modalTitle: {
+            description: "Title of the modal",
+            type: "string",
+            defaultValue: { summary: "Modal details" }
+        },
+        saveDescription: {
+            description: "Description of the button",
+            type: "string",
+            defaultValue: { summary: "Close" }
+        },
+        bgColor: {
+            description: "Background color of the modal",
+            type: "string",
+            defaultValue: { summary: "white" },
+            control: "color"
+        },
+        color: {
+            description: "Font color",
+            type: "string",
+            defaultValue: { summary: "black" },
+            control: "color"
+        },
+        colorHover: {
+            description: "Font color hover of the button",
+            type: "string",
+            defaultValue: { summary: "white" },
+            control: "color"
+        },
+        colorBorder: {
+            description: "Color border",
+            type: "string",
+            defaultValue: { summary: "#ddd" },
+            control: "color"
+        },
+        bgColorButton: {
+            description: "Background color button",
+            type: "string",
+            defaultValue: { summary: "orange" },
+            control: "color"
+        },
+        colorBorderButton: {
+            description: "Color border button",
+            type: "string",
+            defaultValue: { summary: "orange" },
+            control: "color"
+        },
+        colorButton: {
+            description: "Font color button",
+            type: "string",
+            defaultValue: { summary: "white" },
+            control: "color"
+        },
+        bgColorButtonHover: {
+            description: "Background color button hover",
+            type: "string",
+            defaultValue: { summary: "orangered" },
+            control: "color"
+        },
+        showInstantly: {
+            description: "Show instantly or not the modal",
+            type: "boolean",
+            defaultValue: { summary: false }
+        },
         open: {
             action: "open",
             type: "function"
+        },
+        shown: {
+            action: "shown",
+            type: "function"
+        },
+        modalComplete: {
+            action: "modalComplete",
+            type: "function"
+        },
+        closedModal: {
+            action: "closedModal"
         }
     }
     
@@ -32,24 +107,20 @@ const meta: Meta<ModalDetailsComponent> = {
 export default meta;
 type Story = StoryObj<ModalDetailsComponent>;
 
+
 export const ModalDetailsDefault: Story = {
     args: {
-       open: action("open")
+       showInstantly: true,
+       modalTitle: "Custom Modal details",
+       saveDescription: "Close"
     },
     render: (args) => ({
         props: args,
         template: `
-            <div>
-                <div>
-                    <app-button (clicked)="${args.open()}"></app-button>
-                </div>
-                <app-modal-details
-                    [modalTitle]="'Custom modal details'"
-                    [saveDescription]="'Close'"
-                    #modalDetails>
-                    <div>Custom content</div>
-                </app-modal-details>
-            </div>
+            <app-modal-details ${argsToTemplate(args)}
+                #modalDetails>
+                <div>Custom content</div>
+            </app-modal-details>
         `
     })
 }

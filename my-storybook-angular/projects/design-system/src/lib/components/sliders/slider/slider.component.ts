@@ -16,6 +16,7 @@ export class SliderComponent implements OnInit {
     @Input() colorRangeThumb: string = "orange";
     @Input() colorThumbHover: string = "rgba(255,85,0, .1)";
     @Input() colorThumbActiveFocus: string = "rgba(255,85,0, .2)";
+    @Input() color: string = "black";
 
     @Output() valueChanged: EventEmitter<number> = new EventEmitter<number>();
 
@@ -26,8 +27,4 @@ export class SliderComponent implements OnInit {
     setValue(): void {
         this.valueChanged.emit(this.value);
     }
-
-
-    
-
 }

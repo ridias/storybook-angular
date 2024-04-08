@@ -1,0 +1,27 @@
+<ng-template #modal>
+    <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+            <div class="modal-body-content">
+                <div class="modal-body-content-icon">
+                    <div class="modal-body-content-icon-circle">
+                        <i [ngClass]="icon" [style.color]="iconColor"></i>
+                    </div>
+                </div>
+                <div class="modal-body-content-title">
+                    {{ titleValue }}
+                </div>
+                <div class="modal-body-content-description">
+                    {{ description }}
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button"
+                    class="btn btn-save"
+                    (click)="pressButton()">
+            {{ descriptionBtn }}
+            </button>
+        </div>
+    </div>
+</ng-template>

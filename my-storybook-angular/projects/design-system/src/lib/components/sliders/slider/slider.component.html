@@ -13,6 +13,7 @@
             [max]="maxValue" 
             [(ngModel)]="value"
             (change)="setValue()"/> 
-        <div class="slider-value">{{ value }}</div>
+        <div class="slider-value"
+            [style.color]="color">{{ value }}</div>
     </div>
 </div>

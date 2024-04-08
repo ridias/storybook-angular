@@ -1,0 +1,82 @@
+.modal-confirmation {
+    background-color: var(--bgcolor);
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-body {
+    border-top: none !important;
+    height: 200px;
+    border-bottom: none !important;
+}
+
+.modal-body-content-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.modal-body-content-description {
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color);
+}
+
+.modal-body-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.modal-body-content-icon {
+    margin-bottom: 40px;
+}
+
+.modal-body-content-icon-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: var(--bgcolor-circle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body-content-icon-circle i {
+    font-size: 36px;
+}
+
+.modal-footer {
+    border-top: none !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 20px 0px;
+    width: 100%;
+}
+
+.modal-footer button {
+    flex: 1;
+    width: 120px;
+    background-color: var(--bgcolor-btn);
+    color: var(--color-btn);
+    border: 1px solid var(--color-border-btn);
+}
+
+.modal-footer button:hover {
+    background-color: var(--bgcolor-btn-hover);
+    color: var(--color-hover);
+    border: 1px solid var(--bgcolor-btn-hover);
+}

@@ -1,0 +1,31 @@
+<div class="table-simple"
+    [ngStyle]="{
+        '--color-icon-active': colorIconActive,
+        '--color-icon-inactive': colorIconInactive
+    }">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th *ngFor="let header of headers"
+                    scope="col"
+                    [sortable]="header.id"
+                    [direction]="header.direction"
+                    (sort)="onSort($event)"
+                    style="cursor: pointer;">
+                    <div class="table-col">
+                        <span>{{ header.name }}</span>
+                        <div class="table-column-header-icons" *ngIf="header.isSortCol">
+                            <i [ngClass]="header.direction == 'ASC' ? 'general-icon-extra-sm icon-active bi bi-caret-up-fill' : 
+                                'general-icon-extra-sm bi bi-caret-up-fill'"></i>
+                            <i [ngClass]="header.direction == 'DESC' ? 'general-icon-extra-sm icon-active bi bi-caret-down-fill' : 
+                                'general-icon-extra-sm bi bi-caret-down-fill'"></i>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-content></ng-content>
+        </tbody>
+    </table>
+</div>

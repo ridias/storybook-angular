@@ -1,0 +1,39 @@
+.button-icon-text-class, .button-icon-text-class-disable {
+    padding: 10px;
+    background-color: var(--bgcolor);
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--color);
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.button-icon-text-class:hover {
+    background-color: var(--bgcolor-hover);
+    border-color: var(--bgcolor-hover);
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.button-icon-text-class-disable div span {
+    margin-right: 10px;
+}
+
+.button-icon-text-class-disable {
+    opacity: 0.5;
+}
+
+.button-icon-text-class-disable:hover {
+    background-color: var(--bgcolor);
+    border: 1px solid var(--color-border);
+    color: var(--color);
+    opacity: 0.5;
+}
+
+.button-icon-text-class i,
+.button-icon-text-class-disable i {
+    margin-right: 10px;
+}

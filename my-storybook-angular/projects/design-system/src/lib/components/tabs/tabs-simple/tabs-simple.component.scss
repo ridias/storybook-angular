@@ -51,7 +51,7 @@
 }
 
 .tabs-simple-header-item-active {
-    height: 40px;
+    height: 51px;
     border: 1px solid var(--color-border) ;
     border-top: 2px solid var(--bgcolor-hover);
     border-bottom: 1px solid var(--bgcolor);
@@ -77,6 +77,7 @@
 }
 
 .tabs-simple-content {
+    padding: 20px;
     border-top-width: 1px;
     border-top-style: solid;
 }

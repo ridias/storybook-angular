@@ -1,0 +1,35 @@
+.table-simple {
+    width: 100%;
+    height: 100%;
+}
+
+.table-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-column-header-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    height: 15px;
+}
+
+.table-column-header-icons i:first-child {
+    margin-top: 5px;
+}
+
+.table-column-header-icons i:last-child {
+    margin-bottom: 5px;
+}
+
+.table-column-header-icons i {
+    color: var(--color-icon-inactive);
+}
+  
+.icon-active {
+    color: var(--color-icon-active) !important;
+}

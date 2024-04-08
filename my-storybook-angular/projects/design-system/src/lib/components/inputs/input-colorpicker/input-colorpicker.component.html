@@ -1,0 +1,32 @@
+<div class="input-colorpicker"
+    [ngStyle]="{
+        '--color': color,
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color-border': colorBorder,
+        '--color-icon': colorIcon,
+        '--color-icon-hover': colorIconHover
+    }">
+    <div class="input-colorpicker-input">
+        <input type="text" 
+            [(ngModel)]="colorValue" 
+            class="input-colorpicker-input-text"
+            readonly>
+        <input type="color"
+            class="input-colorpicker-input-color"
+            #inputColorPicker
+            (change)="setColor($event)">
+            
+        
+    </div>
+    <div class="input-colorpicker-button">
+        <button (click)="triggerAction()">
+            <i class="general-icon-sm bi bi-palette"></i>
+            <div [style.width]="'75%'" 
+                [style.border-width.px]="3"
+                [style.border-style]="'solid'"
+                [style.border-color]="colorValue">
+            </div>
+        </button>
+    </div>
+</div>

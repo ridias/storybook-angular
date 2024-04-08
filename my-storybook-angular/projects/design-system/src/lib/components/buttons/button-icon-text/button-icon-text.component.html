@@ -1,5 +1,22 @@
-<button>
-    <div class="">Loading</div>
-    <i class=""></i>
+<button
+    [ngStyle]="{
+        '--bgcolor': bgColor,
+        '--bgcolor-hover': bgColorHover,
+        '--color-border': colorBorder,
+        '--color-icon': iconColor,
+        '--color-icon-hover': iconColorHover,
+        '--color': color,
+        '--color-hover': colorHover
+    }"
+    [class]="disabled || isLoading ? 'button-icon-text-class-disable' : 'button-icon-text-class'"
+    [disabled]="disabled || isLoading"
+    (click)="triggedButton()">
+    <div *ngIf="isLoading">
+        <span [class]="loadingClass" 
+            [style.border-color]="isLoadingColor"
+            [style.border-bottom-color]="'transparent'">
+        </span>
+    </div>
+    <i [class]="iconClass" [style.color]="iconColor"></i>
     {{ value }}
 </button>

@@ -1,0 +1,56 @@
+.modal-view {
+    width: 100%;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.modal-content {
+    width: 100%;
+}
+
+.modal-header {
+    background-color: var(--bgcolor) !important;
+    border-bottom: 1px solid var(--color-border) !important;
+}
+
+.modal-header
+.modal-title {
+    color: black;
+}
+
+.modal-body {
+    background-color: var(--bgcolor);
+}
+
+.modal-body p {
+    color: var(--color);
+}
+
+.modal-footer {
+    background-color: var(--bgcolor) !important;
+    border-top: 1px solid var(--color-border) !important;
+}
+
+.modal-footer .btn.btn-save {
+    color: var(--color-btn);
+    background-color: var(--bgcolor-btn);
+    border: 1px solid var(--color-border-btn);
+}
+
+.modal-footer .btn.btn-save:hover{
+    border: 1px solid var(--bgcolor-btn-hover);
+    background-color: var(--bgcolor-btn-hover);
+    color: var(--color-hover);
+}
+
+
+.modal-footer .btn.btn-cancel {
+    color: var(--color-btn);
+    background-color: var(--bgcolor-btn);
+    border: 1px solid var(--color-border-btn);
+}
+
+.modal-footer .btn.btn-cancel:hover{
+    border: 1px solid var(--bgcolor-btn-hover);
+    background-color: var(--bgcolor-btn-hover);
+    color: var(--color-hover);
+}

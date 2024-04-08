@@ -1,0 +1,43 @@
+<ng-template #modal class="modal-confirmation">
+    <div class="modal-content"
+        [ngStyle]="{
+            '--color': color,
+            '--bgcolor': bgColor,
+            '--color-hover': colorHover,
+            '--color-border': colorBorder,
+            '--bgcolor-btn': bgColorButton,
+            '--color-btn': colorButton,
+            '--color-border-btn': colorBorderButton,
+            '--bgcolor-btn-hover': bgColorButtonHover,
+            '--bgcolor-circle': bgColorCircle
+        }">
+        <div class="modal-header"></div>
+        <div class="modal-body">
+            <div class="modal-body-content">
+                <div class="modal-body-content-icon">
+                    <div class="modal-body-content-icon-circle">
+                        <i [ngClass]="icon" [style.color]="iconColor"></i>
+                    </div>
+                </div>
+                <div class="modal-body-content-title">
+                    {{ titleValue }}
+                </div>
+                <div class="modal-body-content-description">
+                    {{ description }}
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button"
+                    class="btn btn-save"
+                    (click)="negativeConfirm()">
+            {{ noDescription }}
+            </button>
+            <button type="button"
+                    class="btn btn-save"
+                    (click)="confirm()">
+            {{ yesDescription }}
+            </button>
+        </div>
+    </div>
+</ng-template>

@@ -8,10 +8,12 @@ import { InputSearchComponent } from "./input-search/input-search.component";
 import { InputSimpleComponent } from "./input-simple/input-simple.component";
 import { SelectSearchComponent } from "./select-search/select-search.component";
 import { FormsModule } from "@angular/forms";
+import { InputColorPickerComponent } from "./input-colorpicker/input-colorpicker.component";
 
 @NgModule({  
     declarations: [
         InputCheckboxComponent,
+        InputColorPickerComponent,
         InputComplexComponent,
         InputMultipleItemsComponent,
         InputRadioButtonComponent,
@@ -25,6 +27,7 @@ import { FormsModule } from "@angular/forms";
     ],
     exports: [
         InputCheckboxComponent,
+        InputColorPickerComponent,
         InputComplexComponent,
         InputMultipleItemsComponent,
         InputRadioButtonComponent,

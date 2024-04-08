@@ -1,0 +1,32 @@
+<ng-template #modalDeleteComponent>
+    <div class="modal-content"
+        [ngStyle]="{
+            '--color': color,
+            '--bgcolor': bgColor,
+            '--color-hover': colorHover,
+            '--color-border': colorBorder,
+            '--bgcolor-btn': bgColorButton,
+            '--color-btn': colorButton,
+            '--color-border-btn': colorBorderButton,
+            '--bgcolor-btn-hover': bgColorButtonHover
+        }">
+        <div class="modal-header">
+            <h5 class="modal-title">{{ modalTitle }}</h5>
+        </div>
+        <div class="modal-body">
+            <p class="text-style">{{ modalDescription }}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button"
+                    class="btn btn-cancel"
+                    (click)="cancel()">
+                    {{ cancelDescription }}
+            </button>
+            <button type="button"
+                    class="btn btn-save"
+                    (click)="deletePressed()">
+                {{ saveDescription }}
+            </button>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,37 @@
+<ng-template #modal>
+    <div class="modal-content"
+        [ngStyle]="{
+            '--color': color,
+            '--bgcolor': bgColor,
+            '--color-hover': colorHover,
+            '--color-border': colorBorder,
+            '--bgcolor-btn': bgColorButton,
+            '--color-btn': colorButton,
+            '--color-border-btn': colorBorderButton,
+            '--bgcolor-btn-hover': bgColorButtonHover
+        }">
+        <div class="modal-header">
+            <h5 class="modal-title">{{ modalTitle }}</h5>
+        </div>
+        <div class="modal-body">
+            <ng-content></ng-content>
+        </div>
+        <div class="modal-footer">
+            <button type="button"
+                    class="btn btn-cancel"
+                    (click)="dismiss()">
+                    {{ cancelDescription }}
+            </button>
+            <button type="button"
+                    class="btn btn-save"
+                    (click)="triggerEventBtnSave()"
+                    [disabled]="isLoadingSaveButton || (modalConfig.disableCloseButton !== undefined && modalConfig.disableCloseButton())">
+                    <span *ngIf="isLoadingSaveButton" 
+                        class="spinner-border spinner-border-sm text-secondary" 
+                        role="status" aria-hidden="true">
+                    </span>
+                    {{ saveDescription }}
+            </button>
+        </div>
+    </div>
+</ng-template>

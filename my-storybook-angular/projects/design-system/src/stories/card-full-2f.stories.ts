@@ -66,6 +66,13 @@ export const CardFull2fDefault: Story = {
     }
 }
 
+export const CardFull2fCustom: Story = {
+    args: {
+        value: "2.500",
+        description: "Orders"
+    }
+}
+
 export const CardFull2fLoading: Story = {
     args: {
         isLoading: true

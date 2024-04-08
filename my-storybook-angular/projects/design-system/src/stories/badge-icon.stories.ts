@@ -35,10 +35,11 @@ const meta: Meta<BadgeIconComponent> = {
             defaultValue: { summary: "" }
         },
         iconSize: {
-            description: "Size of the icon",
-            type: "string",
-            defaultValue: { summary: "md" }
-        }
+            description: "Icon size",
+            options: ['extra-sm', 'sm', 'md', 'lg', 'extra-lg'],
+            defaultValue: { summary: "md"},
+            control: { "type": "radio" }
+        },
     }
 };
 

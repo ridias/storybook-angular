@@ -18,6 +18,7 @@ import { TextsModule } from "./components/texts/text.module";
 import { TimepickersModule } from "./components/timerpickers/timerpickers.module";
 import { TogglesModule } from "./components/toggles/toggles.module";
 import { ButtonsModule } from "./components/buttons/buttons.module";
+import { TablesModule } from "./components/tables/tables.module";
 
 @NgModule({  
     declarations: [
@@ -39,10 +40,11 @@ import { ButtonsModule } from "./components/buttons/buttons.module";
         ProgressBarsModule,
         SemicirclesModule,
         SlidersModule,
+        TablesModule,
         TabsModule,
         TextsModule,
         TimepickersModule,
-        TogglesModule
+        TogglesModule,
     ],  
     exports: [
         

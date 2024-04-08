@@ -73,6 +73,15 @@ export const CardFull3fDefault: Story = {
     }
 }
 
+export const CardFull3fCustom: Story = {
+    args: {
+        valueMain: "2.500",
+        value: "Completed",
+        description: "Orders",
+    }
+}
+
+
 export const CardFull3fLoading: Story = {
     args: {
         isLoading: true

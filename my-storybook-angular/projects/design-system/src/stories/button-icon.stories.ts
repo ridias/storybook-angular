@@ -55,9 +55,10 @@ const meta: Meta<ButtonIconComponent> = {
             control: "color"
         },
         iconSize: {
-            description: 'Size of the icon',
-            type: 'string',
-            defaultValue: { summary: 'md' }
+            description: "Icon size",
+            options: ['extra-sm', 'sm', 'md', 'lg', 'extra-lg'],
+            defaultValue: { summary: "md"},
+            control: { "type": "radio" }
         },
         isLoading: {
             description: 'If it is loading or not',

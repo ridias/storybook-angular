@@ -2,6 +2,7 @@ import { Meta, StoryObj, argsToTemplate, moduleMetadata } from "@storybook/angul
 import { FormsModule } from "@angular/forms";
 import { CardSelectComponent } from "../lib/components/cards/card-select/card-select.component";
 import { FilterOption } from "../lib/models/FilterOption";
+import { NgApexchartsModule } from "ng-apexcharts";
 
 let items: FilterOption[] = [
     { "id": 1, "value": "Element 1", "active": true, "lastDays": -1 },
@@ -24,7 +25,8 @@ const meta: Meta<CardSelectComponent> = {
     decorators: [
         moduleMetadata({
             imports: [
-                FormsModule
+                FormsModule,
+                NgApexchartsModule
             ]
         })
     ],
@@ -113,3 +115,205 @@ export const CardSelectDefault: Story = {
         `
     })
 }
+
+export const CardSelectApexchartDonut: Story = {
+    args: {
+        titleCard: "Donut Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div>
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[44, 55, 13, 33]"
+                            [labels]="['Apple', 'Mango', 'Orange', 'Watermelon']"
+                            [chart]="{'type': 'donut', 'foreColor': '#444', 'width': '100%', 'toolbar': { 'show': false }}"
+                            [stroke]="{'curve': 'smooth'}"
+                            [dataLabels]="{'enabled': false }"
+                            [tooltip]="{'x': { 'format': 'dd/MM/yy HH:mm' }}"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']" >
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
+export const CardSelectApexchartBar: Story = {
+    args: {
+        titleCard: "Bar Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[
+                                { 'name': 'Apple', 'data': [25, 40, 10, 5] }, 
+                                { 'name': 'Mango', 'data': [30, 20, 10, 3] }, 
+                                { 'name': 'Orange', 'data': [50, 60, 30, 1] }, 
+                                { 'name': 'Watermelon', 'data': [35, 35, 20, 10] }
+                            ]"
+                            [labels]="['Week 1', 'Week 2', 'Week 3', 'Week 4']"
+                            [chart]="{'type': 'bar', 'foreColor': '#444', 'width': '100%', 'height': 350, 'toolbar': { 'show': false }}"
+                            [stroke]="{'curve': 'smooth'}"
+                            [xaxis]="{ 'categories': ['Week 1', 'Week 2', 'Week 3', 'Week 4'] }"
+                            [dataLabels]="{'enabled': false }"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']" 
+                            [plotOptions]="{ 'bar': { 'horizontal': true } }">
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
+export const CardSelectApexchartColumn: Story = {
+    args: {
+        titleCard: "Column Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[
+                                { 'name': 'Apple', 'data': [25, 40, 10, 5] }, 
+                                { 'name': 'Mango', 'data': [30, 20, 10, 3] }, 
+                                { 'name': 'Orange', 'data': [50, 60, 30, 1] }, 
+                                { 'name': 'Watermelon', 'data': [35, 35, 20, 10] }
+                            ]"
+                            [chart]="{'type': 'bar', 'foreColor': '#444', 'width': '100%', 'height': 350, 'toolbar': { 'show': false }}"
+                            [stroke]="{'curve': 'smooth'}"
+                            [xaxis]="{ 'categories': ['Week 1', 'Week 2', 'Week 3', 'Week 4'] }"
+                            [dataLabels]="{'enabled': false }"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']">
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
+export const CardSelectApexchartLine: Story = {
+    args: {
+        titleCard: "Line Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[
+                                { 'name': 'Apple', 'data': [25, 40, 10, 5] }, 
+                                { 'name': 'Mango', 'data': [30, 20, 10, 3] }, 
+                                { 'name': 'Orange', 'data': [50, 60, 30, 1] }, 
+                                { 'name': 'Watermelon', 'data': [35, 35, 20, 10] }
+                            ]"
+                            [chart]="{'type': 'line', 'foreColor': '#444', 'width': '100%', 'height': 350, 'toolbar': { 'show': false }}"
+                            [stroke]="{'curve': 'straight'}"
+                            [xaxis]="{ 'categories': ['Week 1', 'Week 2', 'Week 3', 'Week 4'] }"
+                            [dataLabels]="{'enabled': false }"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']" >
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
+export const CardSelectApexchartArea: Story = {
+    args: {
+        titleCard: "Area Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[
+                                { 'name': 'Apple', 'data': [25, 40, 10, 5] }, 
+                                { 'name': 'Mango', 'data': [30, 20, 10, 3] }, 
+                                { 'name': 'Orange', 'data': [50, 60, 30, 1] }, 
+                                { 'name': 'Watermelon', 'data': [35, 35, 20, 10] }
+                            ]"
+                            [chart]="{'type': 'area', 'foreColor': '#444', 'width': '100%', 'height': 350, 'toolbar': { 'show': false }}"
+                            [stroke]="{'curve': 'straight'}"
+                            [xaxis]="{ 'categories': ['Week 1', 'Week 2', 'Week 3', 'Week 4'] }"
+                            [dataLabels]="{'enabled': false }"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']" >
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
+export const CardSelectApexchartHeatmap: Story = {
+    args: {
+        titleCard: "Heatmap Apexchart Card",
+        options: items,
+        optionIdSelected: 1,
+        value: "Element 1"
+    },
+    render: (args) => ({
+        props: args,
+        template: `
+            <app-card-select ${argsToTemplate(args)}>
+                <div style="display: flex; width: 100%;">
+                    <div style="width: 100%;">
+                        <apx-chart 
+                            #chartIntensity id="chartIntensity"
+                            [series]="[
+                                { 'name': 'Apple', 'data': [25, 40, 10, 5] }, 
+                                { 'name': 'Mango', 'data': [30, 20, 10, 3] }, 
+                                { 'name': 'Orange', 'data': [50, 60, 30, 1] }, 
+                                { 'name': 'Watermelon', 'data': [35, 35, 20, 10] }
+                            ]"
+                            [chart]="{'type': 'heatmap', 'foreColor': '#444', 'width': '100%', 'height': 350, 'toolbar': { 'show': false }}"
+                            [xaxis]="{ 'categories': ['Week 1', 'Week 2', 'Week 3', 'Week 4'] }"
+                            [dataLabels]="{'enabled': false }"
+                            [colors]="['#2E93fA','#00E396','#FEB019','#FF4560']" >
+                        </apx-chart>
+                    </div>
+                </div>
+            </app-card-select>
+        `
+    })
+}
+
