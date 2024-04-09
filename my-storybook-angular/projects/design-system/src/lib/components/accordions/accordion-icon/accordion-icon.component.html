@@ -1,21 +1,22 @@
-<div [ngClass]="disable ? 'accordion-component disable' : isOpen ? 'accordion-component is-open' : 'accordion-component'"
+<div [ngClass]="disable ? 'accordion-icon-component disable' : isOpen ? 'accordion-icon-component is-open' : 'accordion-icon-component'"
     [style.border-color]="borderColor"
     [style.background-color]="bgColor"
     [style.color]="color">
     <div>
-        <div class="accordion-header" 
+        <div class="accordion-icon-header" 
             (click)="triggerAction()"
             [style.borderBottom]="borderBottom">
-            <div class="accordion-description">
+            <div class="accordion-icon-description">
+                <i [class]="icon" [style.color]="color"></i>
                 {{ text }}
             </div>
-            <div class="accordion-header-icon">
+            <div class="accordion-icon-header-icon">
                 <i class="general-icon-sm bi bi-chevron-down"
                     [style.transform]="transformIcon"
                     [style.color]="iconColor"></i>
             </div>
         </div>
-        <div class="accordion-content">
+        <div class="accordion-icon-content">
             <ng-content></ng-content>
         </div>
     </div>

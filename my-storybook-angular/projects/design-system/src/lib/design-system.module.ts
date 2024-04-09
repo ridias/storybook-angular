@@ -19,6 +19,7 @@ import { TimepickersModule } from "./components/timerpickers/timerpickers.module
 import { TogglesModule } from "./components/toggles/toggles.module";
 import { ButtonsModule } from "./components/buttons/buttons.module";
 import { TablesModule } from "./components/tables/tables.module";
+import { CarouselsModule } from "./components/carousels/carousels.module";
 
 @NgModule({  
     declarations: [
@@ -31,6 +32,7 @@ import { TablesModule } from "./components/tables/tables.module";
         BadgesModule,
         ButtonsModule,
         CardsModule,
+        CarouselsModule,
         CheckboxesModule,
         InputsModule,
         ListBoxesModule,

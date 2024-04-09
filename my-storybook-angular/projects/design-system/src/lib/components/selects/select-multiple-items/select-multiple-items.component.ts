@@ -2,12 +2,12 @@ import { Component, EventEmitter, HostListener, Input, OnInit, Output } from "@a
 import { MultipleItem } from "../../../models/MultipleItem";
 
 @Component({
-    selector: 'app-input-multiple-items',
-    templateUrl: './input-multiple-items.component.html',
-    styleUrls: ['./input-multiple-items.component.scss']
+    selector: 'app-select-multiple-items',
+    templateUrl: './select-multiple-items.component.html',
+    styleUrls: ['./select-multiple-items.component.scss']
 })
   
-export class InputMultipleItemsComponent implements OnInit {
+export class SelectMultipleItemsComponent implements OnInit {
     
     @Input() inputValue: string = "";
     @Input() items: MultipleItem[] = [];

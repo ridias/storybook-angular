@@ -1,9 +1,9 @@
 import { Meta, StoryObj, argsToTemplate, moduleMetadata } from "@storybook/angular";
 import { FormsModule } from "@angular/forms";
 import { action } from '@storybook/addon-actions';
-import { InputMultipleItemsComponent } from "../lib/components/inputs/input-multiple-items/input-multiple-items.component";
 import { CommonModule } from "@angular/common";
 import { MultipleItem } from "../lib/models/MultipleItem";
+import { SelectMultipleItemsComponent } from "../lib/components/selects/select-multiple-items/select-multiple-items.component";
 
 let items: MultipleItem[] = [
     { "id": 1, "name": "Element 1", "active": false },
@@ -20,9 +20,9 @@ let items: MultipleItem[] = [
     { "id": 12, "name": "Element 12", "active": false }
 ]
 
-const meta: Meta<InputMultipleItemsComponent> = {
-    title: 'Example/Inputs/InputMultipleItems',
-    component: InputMultipleItemsComponent,
+const meta: Meta<SelectMultipleItemsComponent> = {
+    title: 'Example/Selects/SelectMultipleItems',
+    component: SelectMultipleItemsComponent,
     tags: ['autodocs'],
     decorators: [
         moduleMetadata({
@@ -104,9 +104,9 @@ const meta: Meta<InputMultipleItemsComponent> = {
 }
 
 export default meta;
-type Story = StoryObj<InputMultipleItemsComponent>;
+type Story = StoryObj<SelectMultipleItemsComponent>;
 
-export const InputMultipleItemsDefault: Story = {
+export const SelectMultipleItemsDefault: Story = {
     args: {
         items: items,
         cacheItems: items,
@@ -115,8 +115,8 @@ export const InputMultipleItemsDefault: Story = {
     render: (args) => ({
         props: args,
         template: `
-            <app-input-multiple-items ${argsToTemplate(args)}>
-            </app-input-multiple-items>
+            <app-select-multiple-items ${argsToTemplate(args)}>
+            </app-select-multiple-items>
         `
     })
 }

@@ -69,13 +69,13 @@
 
 .multiple-items-input-list-header {
     display: flex;
-    height: 40px;
     padding: 10px;
     border-bottom: 1px solid var(--border-color-input);
 }
 
 .multiple-items-input-list-header-search {
     width: 100%;
+    height: 40px;
     display: flex;
     position: relative;
 }

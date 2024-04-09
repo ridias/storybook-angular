@@ -2,7 +2,7 @@ import { Meta, StoryObj, argsToTemplate, moduleMetadata } from "@storybook/angul
 import { FormsModule } from "@angular/forms";
 import { action } from '@storybook/addon-actions';
 import { SelectSearchOption } from "../lib/models/SelectSearchOption";
-import { SelectSearchComponent } from "../lib/components/inputs/select-search/select-search.component";
+import { SelectSearchComponent } from "../lib/components/selects/select-search/select-search.component";
 
 let items: SelectSearchOption[] = [
     { "value": "1", "active": false, "optionDescription": "Element 1" },
@@ -13,7 +13,7 @@ let items: SelectSearchOption[] = [
 ]
 
 const meta: Meta<SelectSearchComponent> = {
-    title: 'Example/Inputs/SelectSearch',
+    title: 'Example/Selects/SelectSearch',
     component: SelectSearchComponent,
     tags: ['autodocs'],
     decorators: [

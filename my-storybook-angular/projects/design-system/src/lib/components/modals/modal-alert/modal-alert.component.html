@@ -1,5 +1,16 @@
-<ng-template #modal>
-    <div class="modal-content">
+<ng-template #modal class="modal-alert">
+    <div class="modal-content"
+        [ngStyle]="{
+            '--color': color,
+            '--bgcolor': bgColor,
+            '--color-hover': colorHover,
+            '--color-border': colorBorder,
+            '--bgcolor-btn': bgColorButton,
+            '--color-btn': colorButton,
+            '--color-border-btn': colorBorderButton,
+            '--bgcolor-btn-hover': bgColorButtonHover,
+            '--bgcolor-circle': bgColorCircle
+        }">
         <div class="modal-header"></div>
         <div class="modal-body">
             <div class="modal-body-content">

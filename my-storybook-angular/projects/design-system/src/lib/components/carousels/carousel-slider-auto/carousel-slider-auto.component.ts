@@ -1,13 +1,13 @@
-import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from "@angular/core";
 import { Slide } from "../../../models/Slide";
 
 @Component({
-    selector: 'app-carousel-slider',
-    templateUrl: './carousel-slider.component.html',
-    styleUrls: ['./carousel-slider.component.scss']
+    selector: 'app-carousel-slider-auto',
+    templateUrl: './carousel-slider-auto.component.html',
+    styleUrls: ['./carousel-slider-auto.component.scss']
 })
 
-export class CarouselSliderComponent implements OnInit {
+export class CarouselSliderAutoComponent implements OnInit, OnDestroy {
     
     @Input() sliders: Slide[] = [];
     @Input() bgColorBtn: string = "rgba(0, 0, 0, 0.5)";
@@ -15,18 +15,25 @@ export class CarouselSliderComponent implements OnInit {
     @Input() color: string = "white"
     @Input() colorIcon: string = "white";
     @Input() colorHoverIcon: string = "white";
+    @Input() secondsNextSlide: number = 5;
     
     @Output() prevClicked: EventEmitter<Slide> = new EventEmitter<Slide>();
     @Output() nextClicked: EventEmitter<Slide> = new EventEmitter<Slide>();
-    
+
+    intervalId: any = null;
     currentIndex: number = 0;
 
     constructor(){
 
     }
+    ngOnDestroy(): void {
+        if(this.intervalId != null){
+            clearInterval(this.intervalId);
+        }
+    }
     
     ngOnInit(): void {
-        
+        this.intervalId = setInterval(() => this.next(), this.secondsNextSlide * 1000)
     }
 
     next(): void {

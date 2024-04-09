@@ -1,0 +1,15 @@
+<div class="select-class">
+    <select [(ngModel)]="valueSelected" 
+        (change)="onChange($event)"
+        [style.background-color]="bgColor"
+        [style.border-color]="borderColor"
+        [style.color]="color"
+        [style.outline-color]="borderColor"
+        [disabled]="disabled">
+        <option value="-1" selected hidden>{{ description }}</option>
+        <option [value]="option.value" 
+            *ngFor="let option of options">
+            {{ option.description}} 
+        </option>
+    </select>
+</div>

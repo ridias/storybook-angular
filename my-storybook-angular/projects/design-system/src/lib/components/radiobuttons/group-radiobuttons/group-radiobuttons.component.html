@@ -1,0 +1,22 @@
+<div class="group-radiobuttons" 
+    [ngStyle]="{
+        '--bgcolor-checked': bgColorChecked,
+        '--bgcolor-unchecked': bgColorUnchecked,
+        '--bgcolor-hover': bgColorHover,
+        '--color-checkmark': colorCheckmark
+    }">
+    <div class="radiobutton" *ngFor="let radiobtn of radiobuttons">
+        <label class="label-radio"
+            [for]="radiobtn.id">
+            {{ radiobtn.value }}
+            <input class="input-radio"
+                type="radio"
+                [id]="radiobtn.id"
+                [name]="nameGroup"
+                [checked]="radiobtn.active"
+                [attr.disabled]="radiobtn.disable ? true : false"
+                (change)="updateStatusRadio(radiobtn)"/>
+            <span class="checkmark"></span>
+        </label>
+    </div>
+</div>

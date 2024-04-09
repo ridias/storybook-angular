@@ -1,9 +1,9 @@
 import { Meta, StoryObj, argsToTemplate } from "@storybook/angular";
-import { AccordionComponent } from "../lib/components/accordions/accordion/accordion.component";
+import { AccordionIconComponent } from "../lib/components/accordions/accordion-icon/accordion-icon.component";
 
-const meta: Meta<AccordionComponent> = {
-    title: 'Example/Accordions/Accordion',
-    component: AccordionComponent,
+const meta: Meta<AccordionIconComponent> = {
+    title: 'Example/Accordions/AccordionIcon',
+    component: AccordionIconComponent,
     excludeStories: /.*Data$/,
     tags: ['autodocs'],
     argTypes: {
@@ -20,7 +20,7 @@ const meta: Meta<AccordionComponent> = {
         borderColor: {
             description: 'Border color',
             type: 'string',
-            defaultValue: { summary: '#DDD' },
+            defaultValue: { summary: '#CCC' },
             control: "color"
         },
         bgColor: {
@@ -53,35 +53,35 @@ const meta: Meta<AccordionComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<AccordionComponent>;
+type Story = StoryObj<AccordionIconComponent>;
 
-export const AccordionDefault: Story = {
+export const AccordionIconDefault: Story = {
     args: {},
     render: (args) => ({
         props: args,
         template: `
-            <app-accordion ${argsToTemplate(args)}>
+            <app-accordion-icon ${argsToTemplate(args)}>
                 <span>This is my custom content!</span>
-            </app-accordion>
+            </app-accordion-icon>
         ` 
     })
 }
 
-export const AccordionDisable: Story = {
+export const AccordionIconDisable: Story = {
     args: {
         disable: true
     },
     render: (args) => ({
         props: args,
         template: `
-            <app-accordion ${argsToTemplate(args)}>
+            <app-accordion-icon ${argsToTemplate(args)}>
                 <span>This is my custom content!</span>
-            </app-accordion>
+            </app-accordion-icon>
         ` 
     })
 }
 
-export const AccordionGroup: Story = {
+export const AccordionIconGroup: Story = {
     args: {
         
     },
@@ -89,19 +89,19 @@ export const AccordionGroup: Story = {
         props: args,
         template: `
             <div style="width: 100%; display: flex; flex-direction: column; gap: 5px;">
-                <app-accordion [text]="'Accordion 1'">
+                <app-accordion-icon [text]="'Accordion 1'">
                     <span>This is my custom content 1!</span>
-                </app-accordion>
-                <app-accordion [text]="'Accordion 2'" [disable]="true">
+                </app-accordion-icon>
+                <app-accordion-icon [text]="'Accordion 2'" [disable]="true">
                     <span>This is my custom content 2!</span>
-                </app-accordion>
-                <app-accordion [text]="'Accordion 3'">
+                </app-accordion-icon>
+                <app-accordion-icon [text]="'Accordion 3'">
                     <p>This is my custom content 3!</p>
                     <p>This is my custom content 3!</p>
                     <p>This is my custom content 3!</p>
                     <p>This is my custom content 3!</p>
                     <p>This is my custom content 3!</p>
-                </app-accordion>
+                </app-accordion-icon>
             </div>
         ` 
     })
