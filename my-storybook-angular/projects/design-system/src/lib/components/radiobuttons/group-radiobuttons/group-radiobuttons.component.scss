@@ -1,11 +1,12 @@
 .group-radiobuttons {
     width: 100%;
     display: flex;
+    gap: 20px;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .radiobutton {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -20,14 +21,13 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
   
   /* Hide the browser's default radio button */
   .label-radio input {
     position: absolute;
-    opacity: 0;
     cursor: pointer;
+    display: none;
   }
   
   /* Create a custom radio button */
@@ -46,19 +46,9 @@
     cursor: initial;
   }
   
-  /* On mouse-over, add a grey background color */
-  .label-radio:hover input ~ .checkmark {
-    background-color: var(--bgcolor-hover);
-  }
-  
   /* When the radio button is checked, add a blue background */
   .label-radio input:checked ~ .checkmark {
     background-color: var(--bgcolor-checked);
-  }
-
-  .label-radio:hover input:disabled ~ .checkmark {
-    cursor: initial;
-    background-color: var(--bgcolor-unchecked);
   }
   
   /* Create the indicator (the dot/circle - hidden when not checked) */

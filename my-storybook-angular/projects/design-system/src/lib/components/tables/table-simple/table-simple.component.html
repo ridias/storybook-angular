@@ -3,10 +3,13 @@
         '--color-icon-active': colorIconActive,
         '--color-icon-inactive': colorIconInactive
     }">
-    <table class="table table-striped text-center">
+    <table class="table table-striped text-center"
+        [style.border-color]="borderColor">
         <thead>
             <tr>
                 <th *ngFor="let header of headers"
+                    [style.background-color]="bgColor"
+                    [style.color]="color"
                     scope="col"
                     [sortable]="header.id"
                     [direction]="header.direction"
@@ -24,8 +27,15 @@
                 </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody *ngIf="!isLoading">
             <ng-content></ng-content>
         </tbody>
     </table>
+    <div *ngIf="isLoading" class="table-loading"
+        [style.border-color]="borderColor">
+        <span class="loader loader-lg" 
+            [style.border-color]="isLoadingColor"
+            [style.border-bottom-color]="'transparent'">
+        </span>
+    </div>
 </div>

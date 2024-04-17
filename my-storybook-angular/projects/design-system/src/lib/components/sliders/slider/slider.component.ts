@@ -11,6 +11,7 @@ export class SliderComponent implements OnInit {
     @Input() value: number = 0
     @Input() minValue: number = 0;
     @Input() maxValue: number = 0;
+    @Input() steps: number = 1;
     @Input() bgcolor: string = "#ccc";
     @Input() colorSliderThumb: string = "orange";
     @Input() colorRangeThumb: string = "orange";

@@ -1,14 +1,26 @@
+.group-checkboxes {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
 .label-checkbox {
     display: block;
     position: relative;
     padding-left: 35px;
     cursor: pointer;
-    font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
   }
   
   /* Hide the browser's default checkbox */
@@ -66,8 +78,8 @@
   /* Style the checkmark/indicator */
   .label-checkbox .checkmark:after {
     left: 9px;
-    top: 5px;
-    width: 5px;
+    top: 7px;
+    width: 6px;
     height: 10px;
     border: solid var(--color-checkmark);
     border-width: 0 2px 2px 0;

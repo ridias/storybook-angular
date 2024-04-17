@@ -63,22 +63,34 @@ const meta: Meta<CardBtnsComponent> = {
             defaultValue: { summary: "black" },
             control: "color"
         },
+        colorBtn: {
+            description: "Font color button",
+            type: "string",
+            defaultValue: { summary: "white" },
+            control: "color"
+        },
         colorActive: {
             description: "Font color when active",
             type: "string",
             defaultValue: { summary: "white" },
             control: "color"
         },
+        colorBorderBtn: {
+            description: "Color border button",
+            type: "string",
+            defaultValue: { summary: "orange" },
+            control: "color"
+        },
         bgColorBtn: {
             description: "Background color button",
             type: "string",
-            defaultValue: { summary: "#fff" },
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         bgColorBtnActive: {
             description: "Background color button when active",
             type: "string",
-            defaultValue: { summary: "#ddd" },
+            defaultValue: { summary: "orangered" },
             control: "color"
         },
         btnClicked: {

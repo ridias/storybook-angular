@@ -1,0 +1,59 @@
+<div class="menu-vertical">
+    <div class="menu-vertical-header">
+        <div class="menu-vertical-logo">
+            <img [src]="mainImg" 
+                [width]="mainImgWidth" 
+                [height]="mainImgHeight" 
+                *ngIf="isHover"/>
+            <img [src]='logoImg' 
+                [width]="logoImgWidth" 
+                *ngIf="!isHover"/>
+        </div>
+        <div class="menu-vertical-icon">
+            <i class="general-icon-md bi bi-list"></i>
+        </div>
+    </div>
+
+    <div class="menu-vertical-content">
+        <!--<div class="menu"-->
+        <ul>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <i class="general-icon-md bi bi-sun-fill"></i>
+                    <div class="">Modal examples</div>
+                </a>
+            </li>
+            <li class="menu-header">
+                Components
+            </li>
+            <li class="menu-item">
+                <a href="">
+                    <i class="general-icon-md bi bi-sun-fill"></i>
+                    <div class="">Dashboards</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Dashboard País</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="">
+                    <i class="general-icon-md bi bi-sun-fill"></i>
+                    <div class="">IStock</div>
+                </a>
+                <ul class="menu-sub">
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Bosses generals</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Bosses individuals</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" class="menu-link">Informe intensitat</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>

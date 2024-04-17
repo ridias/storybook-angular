@@ -1,17 +1,17 @@
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 
 @Component({
-    selector: 'app-input-checkbox',
-    templateUrl: './input-checkbox.component.html',
-    styleUrls: ['./input-checkbox.component.scss']
+    selector: 'app-checkbox',
+    templateUrl: './checkbox.component.html',
+    styleUrls: ['./checkbox.component.scss']
 })
   
-export class InputCheckboxComponent implements OnInit {
+export class CheckboxComponent implements OnInit {
     
     @Input() label: string = "Element";
     @Input() checked: boolean = false;
     @Input() color: string = "black";
-    @Input() bgColorChecked: string = "#2196F3";
+    @Input() bgColorChecked: string = "orange";
     @Input() bgColorUnchecked: string = "#eee";
     @Input() bgColorHover: string = "#ccc";
     @Input() colorCheckmark: string = "white";

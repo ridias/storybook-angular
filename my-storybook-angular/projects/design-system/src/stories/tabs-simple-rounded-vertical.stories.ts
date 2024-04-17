@@ -74,7 +74,10 @@ export const TabsSimplePrimary: Story = {
     args: {
         tabs: items,
         idTabSelected: 1,
-        tabClicked: action("tabClicked")
+        tabClicked(e) {
+            console.log(e);
+            this.idTabSelected = e.id
+        }
     },
     render: (args) => ({
         props: args,

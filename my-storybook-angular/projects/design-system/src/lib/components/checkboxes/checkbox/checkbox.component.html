@@ -1,5 +1,7 @@
 <label class="label-checkbox"
     [style.color]="color"
+    [style.opacity]="disable ? '0.5' : '1'"
+    [style.cursor]="disable ? 'default' : 'pointer'"
     [ngStyle]="{
         '--bgcolor-checked': bgColorChecked,
         '--bgcolor-unchecked': bgColorUnchecked,

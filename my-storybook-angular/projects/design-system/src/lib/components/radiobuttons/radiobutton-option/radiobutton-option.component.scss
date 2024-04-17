@@ -1,0 +1,75 @@
+.group-radiobutton-option {
+    min-width: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.group-radiobutton-option-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-radiobutton-option-footer {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+  /* Hide the browser's default radio button */
+  .input-radio {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    height: 20px;
+    width: 20px;
+    background-color: var(--bgcolor-unchecked);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .input-radio:disabled {
+    opacity: 0.5;
+    cursor: initial;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .input-radio:checked ~ .checkmark {
+    background-color: var(--bgcolor-checked);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .input-radio:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .group-radiobutton-option-footer .checkmark:after {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-checkmark);
+  }

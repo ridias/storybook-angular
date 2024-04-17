@@ -26,7 +26,7 @@ const meta: Meta<InputColorPickerComponent> = {
             defaultValue: { summary: "#fdfdfd" },
             control: "color"
         },
-        bgColorHover: {
+        bgColorHoverBtn: {
             description: "Background color hover",
             type: "string",
             defaultValue: { summary: "#ddd" },
@@ -74,6 +74,12 @@ export const InputColorPickerDefault: Story = {
 export const InputColorPickerColor: Story = {
     args: {
         colorValue: "#95E39D"
+    }
+}
+
+export const InputColorPickerColorDisable: Story = {
+    args: {
+        disable: true
     }
 }
 

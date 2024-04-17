@@ -49,10 +49,8 @@ export * from './lib/components/carousels/carousel-slider/carousel-slider.compon
 export * from './lib/components/carousels/carousel-slider-auto/carousel-slider-auto.component';
 export * from './lib/components/checkboxes/checkbox-selector/checkbox-selector.component';
 export * from './lib/components/checkboxes/checkbox-selector-sm/checkbox-selector-sm.component';
-export * from './lib/components/inputs/input-checkbox/input-checkbox.component';
 export * from './lib/components/inputs/input-colorpicker/input-colorpicker.component';
 export * from './lib/components/inputs/input-complex/input-complex.component';
-export * from './lib/components/inputs/input-radiobutton/input-radiobutton.component';
 export * from './lib/components/inputs/input-search/input-search.component';
 export * from './lib/components/inputs/input-simple/input-simple.component';
 export * from './lib/components/list-boxes/list-box-checkboxes/list-box-checkboxes.component';

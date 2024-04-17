@@ -9,10 +9,9 @@ import { InputItem } from "../../../models/InputItem";
   
 export class GroupRadiobuttonsComponent implements OnInit {
     
-    @Input() nameGroup: string = "group_radio_btns"
     @Input() radiobuttons: InputItem[] = [];
     @Input() color: string = "black";
-    @Input() bgColorChecked: string = "#2196F3";
+    @Input() bgColorChecked: string = "orange";
     @Input() bgColorUnchecked: string = "#eee";
     @Input() bgColorHover: string = "#ccc";
     @Input() colorCheckmark: string = "white";
@@ -28,7 +27,7 @@ export class GroupRadiobuttonsComponent implements OnInit {
     }
 
     updateStatusRadio(item: InputItem): void {
-        console.log("Update status radio!!");
+        if(item.disable) return;
         let index = 0;
         for(let i = 0; i < this.radiobuttons.length; i++){
             this.radiobuttons[i].active = false;
@@ -38,8 +37,6 @@ export class GroupRadiobuttonsComponent implements OnInit {
             }
         }
 
-        
-        console.log(this.radiobuttons[index]);
         this.radiobuttonSelected.emit(this.radiobuttons[index]);
     }
 

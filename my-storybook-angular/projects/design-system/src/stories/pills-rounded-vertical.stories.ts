@@ -70,7 +70,10 @@ export const PillsRoundedVerticalDefault: Story = {
     args: {
         pills: items,
         idPillActivated: 1,
-        pillClicked: action("pillClicked")
+        pillClicked(e) {
+            console.log(e);
+            this.idPillActivated = e.id
+        }
     },
     render: (args) => ({
         props: args,

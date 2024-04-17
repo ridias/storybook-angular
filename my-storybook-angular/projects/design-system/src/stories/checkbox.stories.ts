@@ -1,12 +1,12 @@
 import { Meta, StoryObj, moduleMetadata } from "@storybook/angular";
 import { FormsModule } from "@angular/forms";
-import { InputRadioButtonComponent } from "../lib/components/inputs/input-radiobutton/input-radiobutton.component";
+import { CheckboxComponent } from "../lib/components/checkboxes/checkbox/checkbox.component";
 
-const meta: Meta<InputRadioButtonComponent> = {
-    title: 'Example/Inputs/RadioButton',
-    component: InputRadioButtonComponent,
+const meta: Meta<CheckboxComponent> = {
+    title: 'Example/Checkboxes/Checkbox',
+    component: CheckboxComponent,
     tags: ['autodocs'],
-    decorators: [ 
+    decorators: [
         moduleMetadata({
             imports: [
                 FormsModule
@@ -33,7 +33,7 @@ const meta: Meta<InputRadioButtonComponent> = {
         bgColorChecked: {
             description: "Background color of the checkbox when checked",
             type: "string",
-            defaultValue: { summary: "#2196F3" },
+            defaultValue: { summary: "orange" },
             control: "color"
         },
         bgColorUnchecked: {
@@ -64,21 +64,21 @@ const meta: Meta<InputRadioButtonComponent> = {
 }
 
 export default meta;
-type Story = StoryObj<InputRadioButtonComponent>;
+type Story = StoryObj<CheckboxComponent>;
 
-export const InputRadioButtonDefault: Story = {
+export const InputCheckboxDefault: Story = {
     args: {
 
     }
 }
 
-export const InputRadioButtonChecked: Story = {
+export const InputCheckboxChecked: Story = {
     args: {
         checked: true
     }
 }
 
-export const InputRadioButtonDisable: Story = {
+export const InputCheckboxDisable: Story = {
     args: {
         disable: true
     }

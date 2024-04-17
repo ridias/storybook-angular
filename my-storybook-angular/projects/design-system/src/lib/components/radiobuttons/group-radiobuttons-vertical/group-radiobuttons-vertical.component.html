@@ -1,0 +1,21 @@
+<div class="group-radiobuttons-vertical" 
+    [ngStyle]="{
+        '--bgcolor-checked': bgColorChecked,
+        '--bgcolor-unchecked': bgColorUnchecked,
+        '--bgcolor-hover': bgColorHover,
+        '--color-checkmark': colorCheckmark
+    }">
+    <div class="radiobutton-vertical" *ngFor="let radiobtn of radiobuttons">
+        <label class="label-radio-vertical"
+            (click)="updateStatusRadio(radiobtn)"
+            [style.opacity]="radiobtn.disable ? '0.5' : '1'"
+            [style.cursor]="radiobtn.disable ? 'default' : 'pointer'">
+            {{ radiobtn.value }}
+            <input class="input-radio-vertical"
+                type="radio"
+                [checked]="radiobtn.active"
+                [attr.disabled]="radiobtn.disable ? true : false"/>
+            <span class="checkmark-vertical"></span>
+        </label>
+    </div>
+</div>

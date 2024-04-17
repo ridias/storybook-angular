@@ -7,7 +7,7 @@ import { GroupRadiobuttonsComponent } from "../lib/components/radiobuttons/group
 
 let items: InputItem[] = [
     { id: 1, value: "Element 1", disable: false, "active": false },
-    { id: 2, value: "Element 2", disable: false, "active": false },
+    { id: 2, value: "Element 2", disable: true, "active": false },
     { id: 3, value: "Element 3", disable: false, "active": false },
     { id: 4, value: "Element 4", disable: false, "active": false },
     { id: 5, value: "Element 5", disable: false, "active": false },
@@ -40,22 +40,22 @@ const meta: Meta<GroupRadiobuttonsComponent> = {
         bgColorChecked: {
             description: "Background color input",
             type: "string",
-            defaultValue: { summary: "#fdfdfd" }
+            defaultValue: { summary: "orange" }
         },
         bgColorUnchecked: {
             description: "Border color input",
             type: "string",
-            defaultValue: { summary: "#ddd" }
+            defaultValue: { summary: "#eee" }
         },
         bgColorHover: {
             description: "Background color button",
             type: "string",
-            defaultValue: { summary: "#ddd" }
+            defaultValue: { summary: "#ccc" }
         },
         colorCheckmark: {
             description: "Background color button hover",
             type: "string",
-            defaultValue: { summary: "#ccc" }
+            defaultValue: { summary: "white" }
         },
         radiobuttonSelected: {
             action: "radiobuttonSelected"
@@ -66,7 +66,7 @@ const meta: Meta<GroupRadiobuttonsComponent> = {
 export default meta;
 type Story = StoryObj<GroupRadiobuttonsComponent>;
 
-export const SelectMultipleItemsDefault: Story = {
+export const GroupRadiobuttonsDefault: Story = {
     args: {
         radiobuttons: items,
         radiobuttonSelected: action("updatedInputValue")

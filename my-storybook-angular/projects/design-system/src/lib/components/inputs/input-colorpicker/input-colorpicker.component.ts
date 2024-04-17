@@ -12,11 +12,13 @@ export class InputColorPickerComponent implements OnInit {
 
     @Input() colorValue: string = "#000000";
     @Input() bgColor: string = "#fdfdfd";
-    @Input() bgColorHover: string = "#ddd";
+    @Input() bgColorBtn: string = "#fdfdfd";
+    @Input() bgColorHoverBtn: string = "#ddd";
     @Input() color: string = "black";
     @Input() colorBorder: string = "#ddd";
     @Input() colorIcon: string = "black";
     @Input() colorIconHover: string = "black";
+    @Input() disable: boolean = false;
     
 
     @Output() colorPicked: EventEmitter<string> = new EventEmitter<string>();

@@ -1,0 +1,25 @@
+
+<div class="group-radiobutton-option"
+    [ngStyle]="{
+        '--bgcolor-checked': bgColorChecked,
+        '--bgcolor-unchecked': bgColorUnchecked,
+        '--bgcolor-hover': bgColorHover,
+        '--color-checkmark': colorCheckmark,
+        '--border-color': borderColor,
+        '--border-color-checked': borderColorChecked,
+        'box-shadow': radiobutton.active ? 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;' : 'none'
+    }"
+    [style.border-color]="radiobutton.active ? borderColorChecked : borderColor"
+    (click)="activeOption()">
+    <div class="group-radiobutton-option-content">
+        <ng-content></ng-content>
+    </div>
+
+    <div class="group-radiobutton-option-footer">
+        <input class="input-radio"
+            type="radio"
+            [checked]="radiobutton.active"
+            [attr.disabled]="radiobutton.disable ? true : false"/>
+        <span class="checkmark"></span>
+    </div>
+</div>

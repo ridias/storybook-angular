@@ -10,7 +10,7 @@ export class InputSimpleComponent implements OnInit {
     
     @Input() colorValue: string = "black";
     @Input() colorBorder: string = "#ddd";
-    @Input() type: "text" | "password" | "number" | "email" | "search" | "tel" = "text";
+    @Input() type: "text" | "number" | "password" | "email" | "search" | "tel" = "text";
     @Input() placeholder: string = "";
     @Input() colorPlaceholder: string = "grey";
     @Input() required: boolean = true;
@@ -19,6 +19,7 @@ export class InputSimpleComponent implements OnInit {
     @Input() errorRequired: string = "Required!";
     @Input() value: string = "";
     @Input() bgColor: string = "#fdfdfd";
+    @Input() disable: boolean = false;
 
     @Output() valueChanged: EventEmitter<string> = new EventEmitter<string>();
     @Output() valueValid: EventEmitter<boolean> = new EventEmitter<boolean>();
@@ -28,6 +29,7 @@ export class InputSimpleComponent implements OnInit {
     }
 
     setValue(): void {
+        if(this.disable) return;
         this.valueChanged.emit(this.value);
     }
 

@@ -9,7 +9,7 @@
     <div class="pills-simple-header">
         <div *ngFor="let option of pills" 
             [ngClass]="option.disable ? 'pills-simple-btn disable' : option.active ? 'pills-simple-btn active' : 'pills-simple-btn'"
-            (click)="triggerBtn(option.id)">
+            (click)="triggerBtn(option)">
             <i [ngClass]="option.icon"></i>
             {{ option.value }}
         </div>

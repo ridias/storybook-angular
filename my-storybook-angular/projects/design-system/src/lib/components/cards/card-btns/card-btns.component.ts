@@ -15,9 +15,11 @@ export class CardBtnsComponent implements OnInit {
     @Input() bgColor: string = "white";
     @Input() colorBorder: string = "#ddd";
     @Input() color: string = "black";
+    @Input() colorBtn: string = "white";
     @Input() colorActive: string = "white";
-    @Input() bgColorBtn: string = "#fff";
-    @Input() bgColorBtnActive: string = "#ddd";
+    @Input() colorBorderBtn: string = "orange";
+    @Input() bgColorBtn: string = "orange";
+    @Input() bgColorBtnActive: string = "orangered";
 
 
     @Output() btnClicked: EventEmitter<number> = new EventEmitter<number>(); 

@@ -11,7 +11,8 @@
         [pattern]="pattern"
         [(ngModel)]="value"
         (keyup)="setValue()"
-        [style.background-color]="bgColor" />
+        [style.background-color]="bgColor"
+        [disabled]="disable" />
     
     <div class="input-simple-errors">
         <small style="color: red;" 

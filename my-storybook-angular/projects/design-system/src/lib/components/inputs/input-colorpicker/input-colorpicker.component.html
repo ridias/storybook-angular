@@ -2,12 +2,14 @@
     [ngStyle]="{
         '--color': color,
         '--bgcolor': bgColor,
-        '--bgcolor-hover': bgColorHover,
+        '--bgcolor-btn': bgColorBtn,
+        '--bgcolor-hover-btn': bgColorHoverBtn,
         '--color-border': colorBorder,
         '--color-icon': colorIcon,
         '--color-icon-hover': colorIconHover
     }">
-    <div class="input-colorpicker-input">
+    <div class="input-colorpicker-input"
+        [style.opacity]="disable ? '0.5' : '1'">
         <input type="text" 
             [(ngModel)]="colorValue" 
             class="input-colorpicker-input-text"
@@ -20,7 +22,8 @@
         
     </div>
     <div class="input-colorpicker-button">
-        <button (click)="triggerAction()">
+        <button (click)="triggerAction()"
+            [disabled]="disable">
             <i class="general-icon-sm bi bi-palette"></i>
             <div [style.width]="'75%'" 
                 [style.border-width.px]="3"

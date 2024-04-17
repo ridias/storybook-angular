@@ -20,6 +20,8 @@ import { TogglesModule } from "./components/toggles/toggles.module";
 import { ButtonsModule } from "./components/buttons/buttons.module";
 import { TablesModule } from "./components/tables/tables.module";
 import { CarouselsModule } from "./components/carousels/carousels.module";
+import { MenusModule } from "./components/menus/menus.module";
+import { ListItemsModule } from "./components/list-items/list-items.module";
 
 @NgModule({  
     declarations: [
@@ -36,6 +38,8 @@ import { CarouselsModule } from "./components/carousels/carousels.module";
         CheckboxesModule,
         InputsModule,
         ListBoxesModule,
+        ListItemsModule,
+        MenusModule,
         NavBreadcurmbsModule,
         PaginationsModule,
         PillsModule,

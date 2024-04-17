@@ -29,6 +29,11 @@ const meta: Meta<SliderComponent> = {
             type: "number",
             defaultValue: { summary: 0 }
         },
+        steps: {
+            description: "Max value of the slider",
+            type: "number",
+            defaultValue: { summary: 1 }
+        },
         bgcolor: {
             description: "Background color slider",
             type: "string",
@@ -78,5 +83,14 @@ export const SliderPrimary: Story = {
         minValue: 0,
         maxValue: 10,
         value: 5
+    }
+}
+
+export const SliderSteps: Story = {
+    args: {
+        minValue: 0,
+        maxValue: 10,
+        value: 4,
+        steps: 2
     }
 }

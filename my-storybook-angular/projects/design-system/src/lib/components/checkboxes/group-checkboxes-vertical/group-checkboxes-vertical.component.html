@@ -1,0 +1,22 @@
+<div class="group-checkboxes-vertical" 
+    [ngStyle]="{
+        '--bgcolor-checked': bgColorChecked,
+        '--bgcolor-unchecked': bgColorUnchecked,
+        '--bgcolor-hover': bgColorHover,
+        '--color-checkmark': colorCheckmark
+    }">
+    <div class="checkbox-vertical" *ngFor="let checkbox of checkboxes">
+        <label class="label-checkbox-vertical"
+            [style.color]="color"
+            [style.opacity]="checkbox.disable ? '0.5' : '1'"
+            [style.cursor]="checkbox.disable ? 'default' : 'pointer'">
+            {{ checkbox.value }}
+            <input class="input-checkbox-vertical" 
+                type="checkbox" 
+                [checked]="checkbox.active"
+                [attr.disabled]="checkbox.disable ? true : null"
+                (change)="updateStatusCheckbox(checkbox)" />
+                <span class="checkmark-vertical"></span>
+        </label>
+    </div>
+</div>

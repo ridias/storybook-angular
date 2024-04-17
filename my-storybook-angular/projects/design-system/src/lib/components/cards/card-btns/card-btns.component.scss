@@ -31,14 +31,14 @@
 .card-btns-list-btn {
     padding: 5px 10px;
     height: 30px;
-    border: 1px solid var(--color-border);
+    border: 1px solid var(--color-border-btn);
     background-color: var(--bgcolor-btn);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    color: var(--color);
+    color: var(--color-btn);
     margin-left: 5px;
     cursor: pointer;
 }

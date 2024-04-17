@@ -13,6 +13,11 @@ export class TableSimpleComponent implements OnInit {
     @Input() headers: TableHeader[] = [];
     @Input() colorIconActive: string = "black";
     @Input() colorIconInactive: string = "grey";
+    @Input() borderColor: string = "#DEE2E6";
+    @Input() bgColor: string = "#ffffff";
+    @Input() color: string = "#444";
+    @Input() isLoading: boolean = false;
+    @Input() isLoadingColor: string = "black";
 
     @Output() sortClicked: EventEmitter<TableHeader> = new EventEmitter<TableHeader>();
     

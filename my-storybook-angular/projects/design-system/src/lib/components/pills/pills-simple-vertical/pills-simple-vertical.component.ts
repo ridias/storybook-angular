@@ -17,7 +17,7 @@ export class PillsSimpleVerticalComponent implements OnInit {
     @Input() color: string = "black";
     @Input() colorHover: string = "white";
     
-    @Output() pillClicked: EventEmitter<number> = new EventEmitter<number>();
+    @Output() pillClicked: EventEmitter<PillOption> = new EventEmitter<PillOption>();
 
     constructor(){
 
@@ -27,10 +27,12 @@ export class PillsSimpleVerticalComponent implements OnInit {
         
     }
 
-    triggerBtn(id: number): void {
+    triggerBtn(item: PillOption): void {
+        if(item.disable) return;
+        if(item.id == this.idPillActivated) return;
         this.inactiveAll();
-        this.setActiveById(id);
-        this.pillClicked.emit(id);
+        this.setActiveById(item.id);
+        this.pillClicked.emit(item);
     }
     
     private inactiveAll(): void {
